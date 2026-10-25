@@ -4,6 +4,14 @@ This is the repo-owned plugin in `plugin/`, not a personal skills installation.
 It does not register native `bili_*` tools, start a server, or grant account access.
 The plugin and the separately installed host runtime are different deliverables.
 
+## Current acceptance (2026-10-25)
+
+The 0.1.0 skill-only plugin was installed and its enabled skill loaded. A fresh
+host-mediated metadata read through that installed skill and the additive CLI
+succeeded on the existing canonical source runtime. See
+[acceptance scope and evidence](dot-plugin-acceptance.md). This is not native
+function registration or an installed-wheel live migration.
+
 ## Build and inspect
 
 ```sh
