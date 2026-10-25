@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "offline_integration_gates_passed",
+  "measured_at_utc": "2026-10-25T14:03:24.443770+00:00",
+  "full_suite": {
+    "command": "PYTHONPATH=.:tests python -m unittest discover -s tests",
+    "tests": 399,
+    "seconds": 15.398,
+    "ok": true
+  },
+  "v032_historical_build": {
+    "ok": true,
+    "installed_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+    "explicit_v1_v2_route_separation_checked": true,
+    "note": "Original runtime/resource manifests and old resource source unchanged; existing approved projection fix retained."
+  },
+  "v033_current_build": {
+    "ok": true,
+    "installed_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+    "both_read_routes_nohost_fail_closed": true,
+    "normal_module_instructions_identical": true,
+    "shared_v3_mapping_checked": true,
+    "historical_v1_v2_routes_retained": true,
+    "separate_schema_routes_checked": true,
+    "exact_documented_module_bootstrap_checked": true,
+    "wheel_file_allowlist_checked": true,
+    "same_id_no_replay": true,
+    "status_read_only": true,
+    "relocation_conflict_preserved": true
+  },
+  "artifacts": {
+    "bili_bridge-0.3.3-py3-none-any.whl": {
+      "sha256": "86a1d8e62155b3a50b4125b71450f0d0ab23978c1ee7f2e54eab80c5b86351be",
+      "bytes": 166437
+    },
+    "dot-bilibili-plugin-0.2.2.zip": {
+      "sha256": "a273fdbbf15bd1418ca94114a2ae3795b3c1d1994d65a04aad87f926edc95ff0",
+      "bytes": 4547
+    }
+  },
+  "production_capture_sha256": "cec9e3b20fe9f2331de33ef286bc114b9afe4f14e68f620b0b5558dde8f95a60",
+  "integration_difference_from_candidate": "Separate additive resources_v033 graph and versioned current docs preserve historical resources/0.3.2 build unchanged; therefore final wheel differs from reviewed standalone candidate. Business/capture code unchanged.",
+  "scope": "Offline package/integration validation, not installed-user-host live test. Prior live acceptance summarized separately; no private evidence included.",
+  "acceptance_summary": {
+    "reviewed_subset_accepted": 5,
+    "reviewed_subset_total": 5,
+    "unreviewed_inventory_entries": 117,
+    "complete_denominator": null
+  }
+}

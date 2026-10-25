@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "status": "offline_pass_live_not_run",
+  "measured_at_utc": "2026-10-25T13:09:43.387922+00:00",
+  "real_original_failure": "preserved; target_mismatch remains failed; private raw evidence not copied",
+  "components": {
+    "host_capture_recipes.js": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+    "search_card_variant_v2.js": "88a192625c7d67115f2746f411adfeade878b5f377cb399813d8a670bd0143bb",
+    "search_card_scope_v3.js": "a995cd995de75cebd851424443c74fc60e3079edc2686ab1fac8523357c07e3a",
+    "host_capture_recipes_v3.js": "659086195a5d5646046db1332e285c7dda8127301a43fb0bb64591e1ea8a7967"
+  },
+  "composed_function_sha256": "cec9e3b20fe9f2331de33ef286bc114b9afe4f14e68f620b0b5558dde8f95a60",
+  "source_sha256": {
+    "scripts/search_card_scope_v3.js": "a995cd995de75cebd851424443c74fc60e3079edc2686ab1fac8523357c07e3a",
+    "scripts/host_capture_recipes_v3.js": "659086195a5d5646046db1332e285c7dda8127301a43fb0bb64591e1ea8a7967",
+    "scripts/compose_host_capture_v3.py": "e340574a389d4854a69efd1360b99fa6a4cf6c46485e1ed04f8d1043dcaf1098",
+    "scripts/host_capture_v3_smoke.cjs": "fad6b14657e3362e7d60fb3043667ebee8431bd2a2ed6076d25311cd7ba7a8d5",
+    "tests/test_host_capture_v3.py": "44e11567e1b00a194e6dd113131f830d3d885bf7a81eff397fe1ed77b9b6b191",
+    "docs/host-capture-recipes-v3.md": "82ae88f2b75d1f5cafb202bde1d3a7bfc60a5e59974fd503333b31f4d693ba3c",
+    "formal/search_card_scope_model.py": "a58175faaf28728686dfe3ad7378b50130a7f2eaf37da76cf4d6bb5d7eb8a758",
+    "scripts/check_search_card_scope_model.py": "e065a2c733b1c36440b245a3222db8d4d54006188af22e50fa2fac63639f8329"
+  },
+  "scope": "actual composed closure in synthetic DOM; not live acceptance or full implementation proof",
+  "sequence_cases": 1364,
+  "sequence_lengths": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "classes": [
+    "video",
+    "advertisement",
+    "course",
+    "unknown"
+  ],
+  "mutation_kills": 5,
+  "mutation_total": 5,
+  "gate": {
+    "timeout_seconds": 10,
+    "node_old_space_mib": 64,
+    "memory_caveat": "Node old space, not process RSS or browser memory"
+  },
+  "run": {
+    "exit_code": 0,
+    "elapsed_seconds": 6.396661197999492,
+    "stdout": "v3 mixed-card: 1364 nonempty bounded sequences + concrete boundaries passed; offline only\nv3 mutations: 5/5 killed (unknown skip, reorder, href leak, window expansion, unbound title)\nv3 ten-card correspondence: 8188 representative composed-source edges passed (not a refinement proof)\n"
+  },
+  "regression": {
+    "command": "PYTHONPATH=.:tests python -m unittest discover -s tests",
+    "tests": 388,
+    "seconds": 14.976,
+    "ok": true
+  },
+  "historical_sources": "v1/v2 fixed files and composer unchanged; old instructions remain v2",
+  "release_status": "candidate only; root must arrange publishing and independent serial browser acceptance",
+  "initial_regression": {
+    "command": "PYTHONPATH=.:tests python -m unittest discover -s tests",
+    "tests": 387,
+    "seconds": 9.828,
+    "ok": true
+  },
+  "initial_run": {
+    "exit_code": 0,
+    "elapsed_seconds": 0.8309514440006751,
+    "stdout": "v3 mixed-card: 1364 nonempty bounded sequences + concrete boundaries passed; offline only\nv3 mutations: 5/5 killed (unknown skip, reorder, href leak, window expansion, unbound title)\n"
+  },
+  "ten_card_model": {
+    "states": 2048,
+    "edges": 8192,
+    "ok": true,
+    "elapsed_seconds": 0.3172312429996964,
+    "peak_traced_bytes": 1502428,
+    "mutants_killed": [
+      "unknown_skip",
+      "reorder",
+      "leak",
+      "backfill",
+      "resume_rejected"
+    ],
+    "budgets": {
+      "states": 10000,
+      "seconds": 5,
+      "python_traced_bytes": 33554432
+    },
+    "scope": "finite quotient transition model; not implementation refinement or browser proof"
+  },
+  "ten_card_source_correspondence": {
+    "normal_prefix_states": 2047,
+    "representative_edges": 8188,
+    "scope": "representative DOM/source correspondence, not exhaustive DOM or refinement proof"
+  },
+  "documentation_clarification": {
+    "at_utc": "2026-10-25T13:13:55.774266+00:00",
+    "change": "limit bounds comments only; search fixed first-ten-card window, up to ten selected videos; no source/API/pin change",
+    "production_closure_pin_reverified": true,
+    "live_evidence": "separate independent browser task; not folded into this offline report"
+  },
+  "historical_source_sha256": {
+    "docs/host-capture-v3-browser-runbook.md": "bc5980ee32a0635329b9cf50a2ce8332e8a0b687821920264865aba414c3d91f"
+  },
+  "public_sanitized_handoff": {
+    "path": "docs/host-capture-v3-browser-runbook.md",
+    "sha256": "bdb0636942846b3eff8b380264e9115b1285cf9b919702d70b8700c9d2f09ba8",
+    "historical_sha256": "bc5980ee32a0635329b9cf50a2ce8332e8a0b687821920264865aba414c3d91f",
+    "note": "Original source hash records the private pre-release handoff at offline verification time; it is not a checksum for the current public file. Public copy replaces the local repository locator with <repo-root> and labels historical pending/default-version statements. No new browser execution or retroactive acceptance is claimed."
+  }
+}

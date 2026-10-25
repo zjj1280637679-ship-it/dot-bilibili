@@ -23,8 +23,8 @@ not registered native chat tools or MCP tools.
    or spool automatically. Missing runtime/shell/CUA access is a concrete setup
    blocker; ask the host operator to configure it, not reveal credentials.
 2. Use `runtime_root` as the working directory for all runtime commands. Run
-   `python -m bili_distribution.cli diagnose`, then
-   `python -m bili_distribution.cli instructions` for the complete resource
+   `python -m bili_distribution.current_cli diagnose`, then
+   `python -m bili_distribution.current_cli instructions` for the complete resource
    closure, and `python -m bili_integration.cli schemas`.
    Read the host runbook and relevant fixed capture/projection resources from
    the paths returned by `instructions`. Check files actually exist before use.
@@ -92,40 +92,41 @@ Pass the business envelope on JSON stdin, not interpolated shell text. Route
 `bili_read_video` through the additive source CLI in the same canonical root:
 
 ```text
-python -m bili_video_reference.cli schemas
-python -m bili_video_reference.cli instructions
-python -m bili_video_reference.cli call --profile <private-profile> --invocation-id <durable-host-id>
+python -m bili_distribution.video_cli schemas
+python -m bili_distribution.video_cli instructions
+python -m bili_distribution.video_cli call --profile <private-profile> --invocation-id <durable-host-id>
 ```
 
-Check that this module is available before making the call. It is not included
-in the historical frozen wheel; do not change runtime roots or install a wheel
-to resolve a missing module. Report a host runtime update requirement instead.
-For this given-video route only, read its own `instructions` output and returned
-capture runbook before starting the call. Require `recipe_version=host-capture-v2`
-and the fixed composer, three component paths/pinned hashes, and composed-function
-hash. Use the returned deterministic composer locally: it accepts no caller
-parameters or source paths, verifies the pinned component bytes, and emits one
-read-only capture function. Verify the UTF-8 function against
-`composed_function_sha256`; the composer's one printed terminal newline is not
-part of that hash. Do not hand-write/reconstruct browser code, change selectors,
-substitute paths/components, or fall back to a different recipe after failure.
-Missing files/module, recipe mismatch, or hash mismatch is a host setup blocker;
-stop before browser work and report it without resetting or replaying the request.
+Require candidate runtime 0.3.3 or later with this documented version mapping.
+Both read routes use the same returned `recipe_version=host-capture-v3`, four
+component paths/pins, and composed-function hash. Missing wrappers are a host
+runtime update blocker; do not switch roots, create a ledger or install over an
+active binding. Use each normal entry's instructions output, not historical v1/v2
+module instructions. The wrappers select resources only; business schemas and
+execution remain unchanged.
 
-Use this exact composed function for this route's supported read-only DOM
-capture, passing only the documented `kind` and bounded `limit`. Do not install
-page globals or script tags. Existing native-CUA preflight, navigation checkpoints,
-receipt validation, budgets and private audit evidence still apply. A layout
-failure from an older invocation remains that failure, not retroactively fixed.
-The v2 capture choice is scoped to `bili_read_video`; do not select it for legacy
-search, arbitrary layouts, or a new business schema. Legacy `bili_search_read`
-continues using `bili_distribution.cli instructions` and its original v1 recipe.
+Run the returned fixed composer locally and verify the UTF-8 function against
+`composed_function_sha256` (the CLI terminal newline is not part of the hash).
+Evaluate that one function through supported read-only DOM capture with only
+`kind` and `limit`. Do not reconstruct code, alter selectors, substitute components,
+install page globals or fall back after failure. Missing resources/pin mismatch
+is a setup blocker. Capture pins and coverage diagnostics stay in private host
+evidence, not closed receipts.
 
-Use the original CLI for `bili_search_read` and `bili_status` (including status
+Search always checks the first ten intersecting recognized cards and returns at
+most ten public videos; `limit=3` does not cap search results at three. `limit`
+only caps comments. Explicit ad/course cards are excluded without selectable URLs;
+unknown or ambiguous cards block. Coverage remains `visible_subset`.
+Existing native-CUA preflight, source freshness, exact BV selection, navigation
+checkpoints, receipt validation and shared budgets apply without change. An old
+failed invocation stays failed. This plugin is instructions plus a local runtime,
+not native MCP registration or an autonomous browser worker.
+
+Use the current thin wrapper for `bili_search_read` and `bili_status` (including status
 for a request originally created by `bili_read_video`):
 
 ```text
-python -m bili_integration.cli call --profile <private-profile> --invocation-id <durable-host-id>
+python -m bili_distribution.current_cli call --profile <private-profile> --invocation-id <durable-host-id>
 ```
 
 The call waits for browser receipts. Start it using a shell session that can

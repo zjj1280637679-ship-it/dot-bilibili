@@ -5,7 +5,7 @@ FIELDS = {'title', 'uploader', 'description', 'duration', 'displayed_counts'}
 SAFE_ERRORS = frozenset({'target_mismatch','login_required','captcha','browser_unavailable',
     'access_denied','dom_unavailable','context_changed','context_unavailable',
     'host_outcome_unknown','host_exchange_failed','host_setup_failed','budget_exhausted',
-    'cooldown','rate_limited'})
+    'hourly_budget','cooldown','rate_limited'})
 
 def field(value, text=False):
     if not isinstance(value, dict) or value.get('state') not in ('visible', 'not_visible'):
