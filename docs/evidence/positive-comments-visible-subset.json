@@ -1,0 +1,67 @@
+{
+  "operation": "browser.comments.read",
+  "result_status": "applied",
+  "observation_status": "observed",
+  "complete": false,
+  "coverage": "visible_subset",
+  "source": "browser_dom",
+  "extraction": "open_shadow_dom",
+  "recipe_version": "host-capture-v1",
+  "recipe_sha256": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+  "scope": "Existing primitive only; separate one-time exploratory host UI scroll before claim. No new installed-skill scroll capability. No reply expansion, private account reads, network, cookies, hidden state or account writes.",
+  "exploratory_host_action": {
+    "action": "scroll_down",
+    "count": 1,
+    "pages": 0.75,
+    "part_of_primitive": false,
+    "part_of_installed_skill": false
+  },
+  "thread_count": 3,
+  "threads": [
+    {
+      "snapshot_position": 1,
+      "visibility": "full",
+      "text_state": "visible",
+      "body_codepoints": 15,
+      "truncated": false,
+      "author_state": "not_visible",
+      "timestamp_state": "not_visible",
+      "like_count_state": "not_visible"
+    },
+    {
+      "snapshot_position": 2,
+      "visibility": "full",
+      "text_state": "visible",
+      "body_codepoints": 6,
+      "truncated": false,
+      "author_state": "not_visible",
+      "timestamp_state": "not_visible",
+      "like_count_state": "not_visible"
+    },
+    {
+      "snapshot_position": 3,
+      "visibility": "partial",
+      "text_state": "visible",
+      "body_codepoints": 8,
+      "truncated": false,
+      "author_state": "not_visible",
+      "timestamp_state": "not_visible",
+      "like_count_state": "not_visible"
+    }
+  ],
+  "limitations": [
+    "Not a fresh five-stage comments=true business chain",
+    "No stable IDs, reply targeting, complete-feed claim or independently verified geometry/occlusion",
+    "Auxiliary author/date/like fields not extracted by frozen recipe; remain not_visible",
+    "Third thread is partial; extracted body may extend below viewport",
+    "No public comment bodies or user/session tracking values included in this proof"
+  ],
+  "raw_evidence_public": false,
+  "shared_ledger_preserved": true,
+  "durable_ledger_state": "applied",
+  "status_matches_result": true,
+  "publication_redactions": [
+    "operation identifier",
+    "canonical video URL"
+  ]
+}

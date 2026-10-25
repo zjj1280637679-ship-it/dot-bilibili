@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bili-bridge"
+version = "0.3.3"
+description = "Community typed dot-host Bilibili bridge with offline defaults"
+requires-python = ">=3.12"
+dependencies = []
+license = {file = "LICENSE"}
+
+[project.scripts]
+bili-bridge = "bili_bridge.cli:main"
+bili-tools = "bili_distribution.current_cli:tool_main"
+bili-runtime = "bili_distribution.current_cli:main"
+bili-video-reference = "bili_distribution.video_cli:main"
+
+[tool.setuptools.package-data]
+bili_bridge = ["fixture_data/*.html"]
+bili_distribution = ["resources/*", "resources/docs/*"]
+scripts = ["*.js"]
+
+[tool.setuptools.packages.find]
+include = ["bili_bridge*", "facade*", "bili_integration*", "bili_distribution*", "bili_video_reference*", "scripts*"]

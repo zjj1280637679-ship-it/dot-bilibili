@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "measured_at": "2026-10-25T10:55:10.856916+00:00",
+  "scope": "offline finite relation and synthetic DOM only; not live acceptance or implementation proof",
+  "recipe_version": "host-capture-v2",
+  "component_sha256": {
+    "host_capture_recipes.js": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+    "search_card_variant_v2.js": "88a192625c7d67115f2746f411adfeade878b5f377cb399813d8a670bd0143bb",
+    "host_capture_recipes_v2.js": "17325b7e0d8687b93354c56dc0457aba6c3d1cf776766c8d919581bb5dafd422"
+  },
+  "composed_function_sha256": "e2eb1202ee68e4a236500ecee707a7a6331918af0dd874b61bda069ef607312e",
+  "pure_relation": {
+    "input_states": 18,
+    "accepted_states": 3,
+    "rejected_states": 15,
+    "domain": "legacy_count and featured_count in 0,1,2(many), featured_shape bool"
+  },
+  "checks": {
+    "v1_smoke": "passed",
+    "v2_composed_smoke": "passed",
+    "unittest_discover_count": 348,
+    "unittest_discover": "passed",
+    "historical_sha256_manifest": "passed",
+    "milestone_manifest_valid": true,
+    "historical_source_files_verified": 67,
+    "existing_model_budget_ok": true,
+    "existing_model_states": {
+      "lifecycle_00": 532,
+      "lifecycle_01": 676,
+      "lifecycle_10": 676,
+      "lifecycle_11": 532,
+      "relay": 50,
+      "browser_relay": 40,
+      "browser_public_search": 84,
+      "browser_video_open": 102
+    },
+    "max_model_seconds": 0.10959201399964513,
+    "max_model_peak_traced_bytes": 323158,
+    "bridge_max_local_import_dependencies": 15,
+    "wide_kernel_injections": 0
+  },
+  "new_relation_dependencies": [],
+  "composition_ports": [
+    "frozen v1 capture(kind,limit)",
+    "pure variant select(count,count,bool)"
+  ],
+  "unchanged": [
+    "v1 recipe",
+    "old integration CLI",
+    "Python receipt validators",
+    "contracts",
+    "kernel",
+    "facade",
+    "ledger",
+    "historical manifests"
+  ],
+  "live_acceptance": "not performed by this implementation task",
+  "post_cleanup_recheck": "v2 smoke and focused 4 tests passed after removing unused field helper; full-suite count above is previous run"
+}

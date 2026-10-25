@@ -1,0 +1,112 @@
+{
+  "alias_replay": {
+    "counts_delta": {
+      "browser_selections": 0,
+      "operations": 0,
+      "reservations": 0
+    },
+    "original_profile_unchanged": true,
+    "parsed_json_equal": true,
+    "same_invocation_id": true,
+    "same_request_id": true,
+    "serialized_bytes_equal": false,
+    "spool_bytes_and_mtimes_unchanged": true
+  },
+  "broadened_query": false,
+  "canonical_runtime_continuity": true,
+  "capture": {
+    "component_sha256": [
+      "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+      "88a192625c7d67115f2746f411adfeade878b5f377cb399813d8a670bd0143bb",
+      "17325b7e0d8687b93354c56dc0457aba6c3d1cf776766c8d919581bb5dafd422"
+    ],
+    "composed_function_sha256": "e2eb1202ee68e4a236500ecee707a7a6331918af0dd874b61bda069ef607312e",
+    "hashes_verified_before_browser_work": true,
+    "recipe_version": "host-capture-v2"
+  },
+  "case": "installed_skill_given_video_reference_v2_post_fix",
+  "comments_requested": false,
+  "date": "2026-10-25",
+  "direct_video_navigation_fallback": false,
+  "distribution_version": "0.3.2",
+  "existing_ledger_and_spool": true,
+  "incidental_browser_behavior": {
+    "account_writes": false,
+    "post_terminal_related_video_autoplay_observed": true,
+    "stopped_play_icon_visually_confirmed": true,
+    "used_as_business_evidence": false,
+    "visible_play_pause_control_clicks": 1
+  },
+  "installed_plugin_version": "0.2.1",
+  "installed_skill_read": true,
+  "limitations": [
+    "visible subset only",
+    "no media comprehension",
+    "comments not requested",
+    "fixed recipe geometry is not an occlusion proof",
+    "cached replay is not a fresh read"
+  ],
+  "metadata_acceptance": true,
+  "native_tool_registration": false,
+  "new_browser_primitive": false,
+  "new_test_reason": "explicit post-fix acceptance after prior known terminal layout failure",
+  "original": {
+    "all_sources_browser_dom": true,
+    "complete": false,
+    "data_present": true,
+    "error": null,
+    "first_navigation_method": "reload_current_exact_search_destination_after_checkpoint",
+    "host_navigation_count": 2,
+    "metadata_field_states": {
+      "description": "visible",
+      "displayed_counts": "visible",
+      "duration": "visible",
+      "title": "visible",
+      "uploader": "visible"
+    },
+    "next_action": "none",
+    "operation_count_delta": {
+      "browser_selections": 1,
+      "operations": 4,
+      "reservations": 4
+    },
+    "scope": "visible_subset",
+    "second_navigation_method": "goto_checkpoint_destination",
+    "stages": [
+      "search",
+      "search_read",
+      "open",
+      "video"
+    ],
+    "status": "succeeded",
+    "validated_receipt_count": 4
+  },
+  "plugin_version_evidence": "parent UI verification; current installed skill independently re-read",
+  "previous_failure_proof_unchanged": true,
+  "schema_version": 1,
+  "search_capture": {
+    "variants": [
+      "featured",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy",
+      "legacy"
+    ],
+    "visible_item_count": 10
+  },
+  "status_check": {
+    "counts_delta": {
+      "browser_selections": 0,
+      "operations": 0,
+      "reservations": 0
+    },
+    "parsed_json_equal": true,
+    "serialized_bytes_equal": false,
+    "spool_bytes_and_mtimes_unchanged": true
+  }
+}

@@ -1,0 +1,4783 @@
+{
+  "schema_version": 1,
+  "metric": "scoped_live_round_trip_v1",
+  "source_inventory": {
+    "leaf_count": 122,
+    "sha256": "7da07fdb2bef3737f04d1b2fcc4f8ec3643c2a55ee20a3bc0afebc349cc0280e",
+    "scope": "proposed-v1",
+    "provenance": "Existing semantic feature inventory only; no private implementation or audit data copied."
+  },
+  "scope_status": "unresolved",
+  "evidence_policy": {
+    "execution_mode": "live",
+    "required_phases": [
+      "before",
+      "action",
+      "after",
+      "restore",
+      "final"
+    ],
+    "historical_passes_reused": 0,
+    "state_restoration_is_not_side_effect_erasure": true
+  },
+  "leaves": [
+    {
+      "id": "collection.read",
+      "label": "读取合集目录",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "collection.select",
+      "label": "选择合集中的视频",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "comments.create",
+      "label": "社交写：发表主评论",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "comments.page.read",
+      "label": "阅读：视频主评论",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "comments.replies.read",
+      "label": "读取指定父评论子回复",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "comments.reply.create",
+      "label": "回复评论",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "comments.sort.select",
+      "label": "切换评论排序",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "comments.viewport.read",
+      "label": "读取已渲染评论",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "reviewed",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "included",
+      "state_contract": {
+        "route": "route_2_browser_bridge.host_dom",
+        "state_keys": [
+          "page_url",
+          "video_bvid",
+          "scroll_position",
+          "comment_sort"
+        ],
+        "action": "comments.viewport.read",
+        "inverse": "verified_no_op",
+        "residual_effects": [
+          "Access logs may persist; not part of declared state projection."
+        ],
+        "expected_after": null,
+        "configuration_status": "requires_exact_target_and_preflight_state"
+      },
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Phase-one semantic scope reviewed. Exact target, preflight state, expected postcondition, operation authorization and five fresh live evidence phases still required.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": [
+        "page_url",
+        "video_bvid",
+        "scroll_position",
+        "comment_sort"
+      ],
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ],
+      "proof_oracle": "Observe currently rendered comments only; no expansion, paging or sorting. Empty visible state is valid only when explicitly captured."
+    },
+    {
+      "id": "danmaku.content.read",
+      "label": "阅读：弹幕",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "danmaku.send",
+      "label": "发送弹幕",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "danmaku.visibility.set",
+      "label": "显示/隐藏弹幕",
+      "tier": "core_web",
+      "source_effect": "local_display_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "discovery.hot_queries.read",
+      "label": "发现：热搜词",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "discovery.hot_videos.read",
+      "label": "发现：热门视频",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "discovery.ranking.read",
+      "label": "发现：分区排行榜",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "discovery.weekly_issues.read",
+      "label": "发现：每周必看期目",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "discovery.weekly_videos.read",
+      "label": "发现：每周必看某期视频",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "dynamic.public.read",
+      "label": "读取UP公开动态",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "dynamic.repost.create",
+      "label": "转发动态",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "dynamic.type.filter",
+      "label": "过滤公开动态",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "home.read",
+      "label": "读取当前首页推荐卡片",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "home.refresh_recommendations",
+      "label": "换一换",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "collection.subscription.set",
+      "label": "设置合集订阅态",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "content.report.submit",
+      "label": "举报稿件",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "favorite.membership.set",
+      "label": "设置视频收藏夹成员态",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "share.link.generate",
+      "label": "生成分享链接（不对外发送）",
+      "tier": "core_web",
+      "source_effect": "local_link_generation_no_send",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "user.follow_state.set",
+      "label": "设置UP关注态",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "video.coin.spend",
+      "label": "投币",
+      "tier": "core_web",
+      "source_effect": "resource_spend",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "video.like_state.set",
+      "label": "设置视频点赞态",
+      "tier": "core_web",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "media.asset.download",
+      "label": "下载获准媒体资产",
+      "tier": "core_web",
+      "source_effect": "local_media_download",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Local output deletion does not establish restoration of remote access logs or pre-existing local files.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "media.audio.transcribe",
+      "label": "媒体：语音转写",
+      "tier": "core_web",
+      "source_effect": "media_processing",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "media.cover.read",
+      "label": "媒体：取得视频封面",
+      "tier": "core_web",
+      "source_effect": "media_processing",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "media.frames.sample",
+      "label": "媒体：取样画面帧",
+      "tier": "core_web",
+      "source_effect": "media_processing",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "media.playurl.resolve",
+      "label": "媒体：解析可播放地址",
+      "tier": "core_web",
+      "source_effect": "media_processing",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "navigation.channel",
+      "label": "进入公共频道",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.display_mode.set",
+      "label": "设置播放器显示模式",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.episode.step",
+      "label": "切换上一/下一集",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.playback_state.set",
+      "label": "设置播放/暂停态",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.quality.select",
+      "label": "选择清晰度",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.speed.select",
+      "label": "选择倍速",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.state.read",
+      "label": "读取当前播放时间及控件",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "player.subtitle.select",
+      "label": "选择字幕",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "player.volume.set",
+      "label": "调节音量",
+      "tier": "core_web",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.category.filter",
+      "label": "按分区筛选搜索结果",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.creators.query",
+      "label": "发现：搜索UP主",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "search.date.filter",
+      "label": "按发布时间过滤",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.duration.filter",
+      "label": "按时长过滤",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.page.select",
+      "label": "切换结果页",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.query.submit",
+      "label": "输入关键词并搜索",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "reviewed",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "included",
+      "state_contract": {
+        "route": "route_2_browser_bridge.host_dom",
+        "state_keys": [
+          "page_url",
+          "search_query",
+          "search_filters",
+          "result_page",
+          "scroll_position"
+        ],
+        "action": "search.query.submit",
+        "inverse": "restore_captured_navigation_context",
+        "residual_effects": [
+          "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+        ],
+        "expected_after": null,
+        "configuration_status": "requires_exact_target_and_preflight_state"
+      },
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Phase-one semantic scope reviewed. Exact target, preflight state, expected postcondition, operation authorization and five fresh live evidence phases still required.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": [
+        "page_url",
+        "search_query",
+        "search_filters",
+        "result_page",
+        "scroll_position"
+      ],
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ],
+      "proof_oracle": "Submit a different public query; capture exact query and results context; restore previous URL/query/filters/page/scroll, then recapture."
+    },
+    {
+      "id": "search.results.visible.read",
+      "label": "读取当前页搜索结果",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "reviewed",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "included",
+      "state_contract": {
+        "route": "route_2_browser_bridge.host_dom",
+        "state_keys": [
+          "page_url",
+          "search_query",
+          "search_filters",
+          "result_page",
+          "scroll_position"
+        ],
+        "action": "search.results.visible.read",
+        "inverse": "verified_no_op",
+        "residual_effects": [
+          "Access logs may persist; not part of declared state projection."
+        ],
+        "expected_after": null,
+        "configuration_status": "requires_exact_target_and_preflight_state"
+      },
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Phase-one semantic scope reviewed. Exact target, preflight state, expected postcondition, operation authorization and five fresh live evidence phases still required.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": [
+        "page_url",
+        "search_query",
+        "search_filters",
+        "result_page",
+        "scroll_position"
+      ],
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ],
+      "proof_oracle": "Read only rendered cards; exact returned BV/URL/title must match captured DOM; no additional search or paging."
+    },
+    {
+      "id": "search.sort.select",
+      "label": "切换搜索排序",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "search.type.select",
+      "label": "切换结果类型",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "series.members.read",
+      "label": "阅读：系列成员",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "subtitles.search",
+      "label": "阅读：字幕关键词定位",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "subtitles.track.read",
+      "label": "阅读：读取字幕/转录轨",
+      "tier": "core_web",
+      "source_effect": "media_processing",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "user.collections.read",
+      "label": "进入UP合集和系列",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "user.content.page",
+      "label": "读取UP内容下一页",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "user.play_all",
+      "label": "播放全部",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "user.profile.read",
+      "label": "读取公开UP资料",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "user.search",
+      "label": "搜索UP空间内容",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "user.series.read",
+      "label": "阅读：UP系列目录",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "user.uploads.read",
+      "label": "进入UP投稿",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "user.videos.sort",
+      "label": "排序UP公开视频",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "video.chapters.read",
+      "label": "阅读：章节/进度条段落",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "video.metadata.visible.read",
+      "label": "读取视频公开元数据",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "reviewed",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "included",
+      "state_contract": {
+        "route": "route_2_browser_bridge.host_dom",
+        "state_keys": [
+          "page_url",
+          "video_bvid",
+          "scroll_position",
+          "player_paused"
+        ],
+        "action": "video.metadata.visible.read",
+        "inverse": "verified_no_op",
+        "residual_effects": [
+          "Access logs may persist; not part of declared state projection."
+        ],
+        "expected_after": null,
+        "configuration_status": "requires_exact_target_and_preflight_state"
+      },
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Phase-one semantic scope reviewed. Exact target, preflight state, expected postcondition, operation authorization and five fresh live evidence phases still required.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": [
+        "page_url",
+        "video_bvid",
+        "scroll_position",
+        "player_paused"
+      ],
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ],
+      "proof_oracle": "Read visible title/UP/BV and description only; no playback control or navigation; absent fields remain absent."
+    },
+    {
+      "id": "video.parts.read",
+      "label": "阅读：多P目录",
+      "tier": "core_web",
+      "source_effect": "public_read",
+      "operation_kind": "read_or_derive",
+      "classification": "observation_only",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derive within a declared unchanged UI/input projection; no-op restoration must be verified, not assumed.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Declared original visible UI/input state; no account or playback writes.",
+      "inverse": "verified_no_op",
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "video.search_result.open",
+      "label": "打开指定视频",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "reviewed",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "included",
+      "state_contract": {
+        "route": "route_2_browser_bridge.host_dom",
+        "state_keys": [
+          "page_url",
+          "search_query",
+          "search_filters",
+          "result_page",
+          "scroll_position"
+        ],
+        "action": "video.search_result.open",
+        "inverse": "restore_captured_navigation_context",
+        "residual_effects": [
+          "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+        ],
+        "expected_after": null,
+        "configuration_status": "requires_exact_target_and_preflight_state"
+      },
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Phase-one semantic scope reviewed. Exact target, preflight state, expected postcondition, operation authorization and five fresh live evidence phases still required.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": [
+        "page_url",
+        "search_query",
+        "search_filters",
+        "result_page",
+        "scroll_position"
+      ],
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ],
+      "proof_oracle": "Open exact selected public BV; capture URL and visible BV/title match; return to prior results context and restore page/filter/scroll. Watch-history residual is outside restoration scope."
+    },
+    {
+      "id": "video.tags.navigate",
+      "label": "按视频标签搜索",
+      "tier": "core_web",
+      "source_effect": "navigation",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.audience_conversion.read",
+      "label": "分析：读取观众/转粉",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.export",
+      "label": "分析：导出",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.fan_activity.read",
+      "label": "分析：读取粉丝活跃",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.interactions.read",
+      "label": "分析：读取互动分布",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.peers.read",
+      "label": "分析：读取同行比较",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.analytics.retention.read",
+      "label": "分析：读取观看留存",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.article.delete",
+      "label": "专栏：删除",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.article.publish",
+      "label": "专栏：发布",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.article.read",
+      "label": "专栏：查询",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.authorized_video_data.read",
+      "label": "读取授权稿件数据",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.collection.create",
+      "label": "合集：创建",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.delete",
+      "label": "合集：删除",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.edit",
+      "label": "合集：修改资料",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.episode_title.set",
+      "label": "合集：修改单集标题",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.membership.set",
+      "label": "设置合集成员（增/移除）",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.order.set",
+      "label": "合集：排序",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.publish_notice.set",
+      "label": "合集：设置投稿动态抑制",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.sections.set",
+      "label": "合集：设置小节",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.collection.space_visibility.set",
+      "label": "合集：设置空间防刷屏",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.comments.delete",
+      "label": "评论：删除",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.comments.enabled.set",
+      "label": "互动：设置评论开放状态",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.comments.pending.read",
+      "label": "评论：读取待精选队列",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.comments.pin.set",
+      "label": "评论：置顶",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.comments.selection_decision.set",
+      "label": "设置待精选评论处理结果（批准/忽略）",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.comments.selection_mode.set",
+      "label": "评论：设置精选模式",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.danmaku.delete",
+      "label": "弹幕：删除",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.danmaku.enabled.set",
+      "label": "互动：设置弹幕开放状态",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.danmaku.filter.set",
+      "label": "弹幕：设置关键词/正则过滤",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.danmaku.protection.set",
+      "label": "弹幕：保护",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.asset.upload",
+      "label": "投稿：上传视频资产",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.chapters.set",
+      "label": "视频：设置章节/看点",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.delete",
+      "label": "视频：删除稿件",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.edit",
+      "label": "视频：编辑已有稿件",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.metadata.configure",
+      "label": "投稿：配置视频元数据",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "state_restorable_external_with_residual_effects",
+      "classification_status": "provisional",
+      "classification_reason": "Setting suggests an inverse; notifications, audit logs, moderation and downstream observations may persist. Inverse remains unverified.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Exact target property/membership value and object identity; not emitted notifications/audit logs.",
+      "inverse": "Set the captured original property/membership value; verify target-specific inverse before execution.",
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "creator.video.owned.read",
+      "label": "视频：查询本人稿件",
+      "tier": "creator_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "creator.video.publish.submit",
+      "label": "视频：提交发布",
+      "tier": "creator_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "live.authorized_events.read",
+      "label": "直播：接收授权事件流",
+      "tier": "live_extension",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "live.broadcast.start",
+      "label": "主播：开播",
+      "tier": "live_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "live.interaction_session.end",
+      "label": "互动项目：结束",
+      "tier": "live_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "irreversible",
+      "classification_status": "provisional",
+      "classification_reason": "No verified inverse restoring original identity, resources, notifications and downstream effects.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "live.interaction_session.start",
+      "label": "互动项目：开始",
+      "tier": "live_extension",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "live.player.danmaku_display.set",
+      "label": "直播播放器：设置弹幕显示",
+      "tier": "live_extension",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "live.player.playback_state.set",
+      "label": "直播播放器：设置播放态",
+      "tier": "live_extension",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "live.player.quality.set",
+      "label": "直播播放器：切换清晰度",
+      "tier": "live_extension",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "live.player.volume.set",
+      "label": "直播播放器：设置音量",
+      "tier": "live_extension",
+      "source_effect": "local_playback_state",
+      "operation_kind": "state_change",
+      "classification": "reversible_ui",
+      "classification_status": "provisional",
+      "classification_reason": "Visible UI state may be restorable; watch history, recommendations and elapsed playback are not assumed restored.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Original page URL, selection/filter state, viewport and relevant player controls; not elapsed wall time or server history.",
+      "inverse": "Restore captured original control values and navigation context.",
+      "irreversible_residuals": [
+        "Possible watch/history/recommendation/access-log changes; outside declared UI projection."
+      ]
+    },
+    {
+      "id": "account.authorized_data.read",
+      "label": "读取授权账号数据",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "favorite.content.read",
+      "label": "私有/收藏：读夹内视频",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "favorite.folders.read",
+      "label": "私有/收藏：列收藏夹",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Read/derivation is not itself a reversible state-change trial; side effects require route-specific review.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "note.create",
+      "label": "记笔记",
+      "tier": "private_account",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "messages.content.read",
+      "label": "读取指定私信正文",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "messages.send",
+      "label": "社交写：发送私信",
+      "tier": "private_account",
+      "source_effect": "external_write",
+      "operation_kind": "state_change",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Notifications, audit/moderation records and third-party observations may persist."
+      ]
+    },
+    {
+      "id": "messages.sessions.read",
+      "label": "读取本人私信会话列表",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "notifications.likes.read",
+      "label": "私有：收到的点赞通知",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "notifications.mentions.read",
+      "label": "私有：收到的@通知",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "notifications.replies.read",
+      "label": "私有：收到的回复通知",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    },
+    {
+      "id": "notifications.unread.read",
+      "label": "私有：未读消息计数",
+      "tier": "private_account",
+      "source_effect": "private_read",
+      "operation_kind": "read_or_derive",
+      "classification": "unknown",
+      "classification_status": "provisional",
+      "classification_reason": "Recall/delete/inverse or read-receipt behavior not established for the exact target and route.",
+      "scope": "unresolved",
+      "state_contract": null,
+      "authorization": {
+        "status": "not_established",
+        "reference": null,
+        "target": null,
+        "residual_effects_approved": false
+      },
+      "evidence": {
+        "before": null,
+        "action": null,
+        "after": null,
+        "restore": null,
+        "final": null
+      },
+      "review": {
+        "status": "pending",
+        "reviewer": null,
+        "reference": null
+      },
+      "status": "not_run",
+      "blocker": "Review exact route/target, state projection, inverse, residual effects and authorization before live execution.",
+      "historical_evidence_carried_forward": false,
+      "restoration_scope": "Assessment required; no restoration claim.",
+      "inverse": null,
+      "irreversible_residuals": [
+        "Access logs may persist; not part of declared state projection."
+      ]
+    }
+  ],
+  "phase_one_allowlist": {
+    "status": "reviewed_semantic_scope_not_live_acceptance",
+    "leaf_ids": [
+      "comments.viewport.read",
+      "search.results.visible.read",
+      "video.metadata.visible.read",
+      "search.query.submit",
+      "video.search_result.open"
+    ],
+    "scope": "Existing five browser primitives; observation-only reads plus bounded public navigation. No account-write authorization."
+  }
+}
