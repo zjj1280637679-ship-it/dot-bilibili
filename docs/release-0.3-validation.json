@@ -1,0 +1,47 @@
+{
+  "version": "0.3.0",
+  "verified_utc": "2026-10-25T07:12:38.258766+00:00",
+  "python_tests": {
+    "count": 295,
+    "status": "pass",
+    "command": "python -m unittest discover -s tests -q"
+  },
+  "checks": [
+    {
+      "command": "python scripts/check_model.py",
+      "status": "pass"
+    },
+    {
+      "command": "python scripts/check_verification_budget.py",
+      "status": "pass"
+    },
+    {
+      "command": "python scripts/check_delivery_boundaries.py",
+      "status": "pass"
+    },
+    {
+      "command": "python scripts/check_milestone_five.py",
+      "status": "pass"
+    },
+    {
+      "command": "node scripts/host_projection_smoke.cjs",
+      "status": "pass"
+    },
+    {
+      "command": "node scripts/host_capture_smoke.cjs",
+      "status": "pass"
+    }
+  ],
+  "strict_milestone": {
+    "accepted": 5,
+    "denominator": 5,
+    "all_business_denominator": 122
+  },
+  "native_chat_tool_registration": "not_implemented",
+  "github_actions": "not_configured",
+  "notes": [
+    "Local and trusted-host evidence; not full-program formal proof.",
+    "Raw browser captures and private research excluded.",
+    "Public live summaries are sanitized, not independently authenticated browser attestations."
+  ]
+}

@@ -1,0 +1,1645 @@
+{
+  "schema_version": 1,
+  "evidence_id": "strict-chain-b",
+  "evidence_kind": "trusted_host_live_browser_attestation",
+  "trust_boundary": "Public sanitized summary, not a cryptographic DOM proof. Private raw captures and journal were independently reviewed; hashes preserve linkage without publishing content or identifiers.",
+  "private_summary_sha256": "016d2c1d6f2441ba89e238579522092b552d356136d5ba1f3aee05c0a3c4708a",
+  "runtime_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+  "recipe_sha256": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+  "workflow_sha256": "f483f326da5211df7c79cddd9607aaa81579e9f99c1ca9162764fbee846b5529",
+  "selected_object_binding_sha256": "30dfc20dc35a74790f0c6d1aa449a02c06ce876c0d850f060c623fd97effd761",
+  "query_binding_sha256": "b089df5b46df3ef48d1a35e2e6619315a3753a22aa507fd0a4561da81adc506a",
+  "workflow_status": "succeeded",
+  "operations": [
+    {
+      "operation": "browser.public_search",
+      "captured_at": 1792911838.165,
+      "captured_at_utc": "2026-10-25T07:03:58.165000+00:00",
+      "recipe_version": "host-capture-v1",
+      "diagnostics": {
+        "recognized_card_count": 42,
+        "selected_fields": [
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 64,
+                "right": 260.1875,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 219.640625,
+                "right": 252.1875,
+                "top": 313.34375,
+                "width": 32.546875
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 64,
+                "right": 260.1875,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 82,
+                "right": 134.015625,
+                "top": 392.34375,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 413.765625,
+                "right": 464.375,
+                "top": 313.34375,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 294.1875,
+                "right": 333.203125,
+                "top": 392.34375,
+                "width": 39.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 626.875,
+                "right": 684.71875,
+                "top": 313.34375,
+                "width": 57.84375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 506.375,
+                "right": 562.71875,
+                "top": 392.34375,
+                "width": 56.34375
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 838.140625,
+                "right": 888.75,
+                "top": 313.34375,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 718.5625,
+                "right": 770.578125,
+                "top": 392.34375,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": false,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 1068.390625,
+                "right": 1100.9375,
+                "top": 313.34375,
+                "width": 32.546875
+              },
+              "rendered": false
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 930.75,
+                "right": 992.90625,
+                "top": 392.34375,
+                "width": 62.15625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 64,
+                "right": 260.1875,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 202.546875,
+                "right": 252.1875,
+                "top": 535.6875,
+                "width": 49.640625
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 64,
+                "right": 260.1875,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 82,
+                "right": 134.015625,
+                "top": 614.6875,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 425.53125,
+                "right": 476.140625,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 294.1875,
+                "right": 386.671875,
+                "top": 614.6875,
+                "width": 92.484375
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 644.015625,
+                "right": 676.5625,
+                "top": 535.6875,
+                "width": 32.546875
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 506.375,
+                "right": 558.390625,
+                "top": 614.6875,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 842.6875,
+                "right": 893.296875,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 718.5625,
+                "right": 783.578125,
+                "top": 614.6875,
+                "width": 65.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 1050.328125,
+                "right": 1100.9375,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 930.75,
+                "right": 1049.21875,
+                "top": 614.6875,
+                "width": 118.46875
+              },
+              "rendered": true
+            }
+          }
+        ],
+        "viewport": {
+          "height": 761,
+          "width": 1188
+        }
+      },
+      "reservation_time": 1792911808.32996,
+      "raw_url_preserved_in_private_capture": true,
+      "capture_sha256": "abb93dfc2cc1d19c5b7bdb68c5d78ad3fe777f431e1358146f71c54720025c74",
+      "visible_items": 10,
+      "raw_hrefs_preserved": true,
+      "state": "applied",
+      "operation_binding_sha256": "1d70cdab11b52e5ded702179904c8f5f92e79997247ba42b74a79000a6d3258c",
+      "private_operation_summary_sha256": "a9dc948d1b7eb9abfa046909337376c32fd05f491b67e8aaf39e53b9328eda97"
+    },
+    {
+      "operation": "browser.search_results.read",
+      "captured_at": 1792911853.506,
+      "captured_at_utc": "2026-10-25T07:04:13.506000+00:00",
+      "recipe_version": "host-capture-v1",
+      "diagnostics": {
+        "recognized_card_count": 42,
+        "selected_fields": [
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 64,
+                "right": 260.1875,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 219.640625,
+                "right": 252.1875,
+                "top": 313.34375,
+                "width": 32.546875
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 64,
+                "right": 260.1875,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 82,
+                "right": 134.015625,
+                "top": 392.34375,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 413.765625,
+                "right": 464.375,
+                "top": 313.34375,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 294.1875,
+                "right": 333.203125,
+                "top": 392.34375,
+                "width": 39.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 626.875,
+                "right": 684.71875,
+                "top": 313.34375,
+                "width": 57.84375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 506.375,
+                "right": 562.71875,
+                "top": 392.34375,
+                "width": 56.34375
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 838.140625,
+                "right": 888.75,
+                "top": 313.34375,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 718.5625,
+                "right": 770.578125,
+                "top": 392.34375,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.34375,
+                "height": 182.34375,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 226,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": false,
+              "present": true,
+              "rect": {
+                "bottom": 331.34375,
+                "height": 18,
+                "left": 1068.390625,
+                "right": 1100.9375,
+                "top": 313.34375,
+                "width": 32.546875
+              },
+              "rendered": false
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 388.34375,
+                "height": 44,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 344.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 408.59375,
+                "height": 16.25,
+                "left": 930.75,
+                "right": 992.90625,
+                "top": 392.34375,
+                "width": 62.15625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 64,
+                "right": 260.1875,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 202.546875,
+                "right": 252.1875,
+                "top": 535.6875,
+                "width": 49.640625
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 64,
+                "right": 260.1875,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 82,
+                "right": 134.015625,
+                "top": 614.6875,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 425.53125,
+                "right": 476.140625,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 276.1875,
+                "right": 472.375,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 294.1875,
+                "right": 386.671875,
+                "top": 614.6875,
+                "width": 92.484375
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 644.015625,
+                "right": 676.5625,
+                "top": 535.6875,
+                "width": 32.546875
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 488.375,
+                "right": 684.5625,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 506.375,
+                "right": 558.390625,
+                "top": 614.6875,
+                "width": 52.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 842.6875,
+                "right": 893.296875,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 700.5625,
+                "right": 896.75,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 718.5625,
+                "right": 783.578125,
+                "top": 614.6875,
+                "width": 65.015625
+              },
+              "rendered": true
+            }
+          },
+          {
+            "card": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.6875,
+                "height": 182.34375,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 448.34375,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "duration": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 553.6875,
+                "height": 18,
+                "left": 1050.328125,
+                "right": 1100.9375,
+                "top": 535.6875,
+                "width": 50.609375
+              },
+              "rendered": true
+            },
+            "title": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 610.6875,
+                "height": 44,
+                "left": 912.75,
+                "right": 1108.9375,
+                "top": 566.6875,
+                "width": 196.1875
+              },
+              "rendered": true
+            },
+            "uploader": {
+              "intersects": true,
+              "present": true,
+              "rect": {
+                "bottom": 630.9375,
+                "height": 16.25,
+                "left": 930.75,
+                "right": 1049.21875,
+                "top": 614.6875,
+                "width": 118.46875
+              },
+              "rendered": true
+            }
+          }
+        ],
+        "viewport": {
+          "height": 761,
+          "width": 1188
+        }
+      },
+      "reservation_time": 1792911844.5423849,
+      "raw_url_preserved_in_private_capture": true,
+      "capture_sha256": "835a1c8e64c71d054d62c2801b91d71e568b1bb9c0c5a7826107c567daaa5bc7",
+      "visible_items": 10,
+      "raw_hrefs_preserved": true,
+      "state": "applied",
+      "operation_binding_sha256": "9c92676b8de9e43b421bffd5336d0c9b980b38d9304dad1665b3c5c74ea1dc12",
+      "private_operation_summary_sha256": "013a96bdca112a2f41ca9d24a48738c93e1bc36300a0596524b7ea5f862f0a83"
+    },
+    {
+      "operation": "browser.video.open",
+      "captured_at": 1792911894.237,
+      "captured_at_utc": "2026-10-25T07:04:54.237000+00:00",
+      "recipe_version": "host-capture-v1",
+      "diagnostics": {
+        "metadata_geometry": {
+          "description": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 644,
+              "height": 112,
+              "left": 41,
+              "right": 752,
+              "top": 532,
+              "width": 711
+            },
+            "rendered": true
+          },
+          "displayed_counts": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 516,
+              "height": 57,
+              "left": 41,
+              "right": 752,
+              "top": 459,
+              "width": 711
+            },
+            "rendered": true
+          },
+          "duration": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 387,
+              "height": 14,
+              "left": 213.015625,
+              "right": 243.046875,
+              "top": 373,
+              "width": 30.03125
+            },
+            "rendered": true
+          },
+          "title": {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": -41,
+              "height": 28,
+              "left": 41,
+              "right": 722,
+              "top": -69,
+              "width": 681
+            },
+            "rendered": true
+          },
+          "uploader": {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": -54.25,
+              "height": 22.5,
+              "left": 842,
+              "right": 902.015625,
+              "top": -76.75,
+              "width": 60.015625
+            },
+            "rendered": true
+          }
+        },
+        "viewport": {
+          "height": 761,
+          "width": 1188
+        }
+      },
+      "reservation_time": 1792911859.8681426,
+      "raw_url_preserved_in_private_capture": true,
+      "capture_sha256": "fb6e55926c7342dfbf071cf20362fa4ba928869537a0179b47b281ca1e478437",
+      "state": "applied",
+      "operation_binding_sha256": "c3ebbdcf87333f8302965dd56883ebe6883cc059b447b4c2aa6a5261ddb61ef9",
+      "private_operation_summary_sha256": "cce3257c40a27a565cec8ebd3e7af4314fa5b1df4491f358f91b7c8ee1c06d2b",
+      "source_operation_binding_sha256": "9c92676b8de9e43b421bffd5336d0c9b980b38d9304dad1665b3c5c74ea1dc12",
+      "object_binding_sha256": "30dfc20dc35a74790f0c6d1aa449a02c06ce876c0d850f060c623fd97effd761"
+    },
+    {
+      "operation": "browser.video_page.read",
+      "captured_at": 1792911904.408,
+      "captured_at_utc": "2026-10-25T07:05:04.408000+00:00",
+      "recipe_version": "host-capture-v1",
+      "diagnostics": {
+        "metadata_geometry": {
+          "description": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 644,
+              "height": 112,
+              "left": 41,
+              "right": 752,
+              "top": 532,
+              "width": 711
+            },
+            "rendered": true
+          },
+          "displayed_counts": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 516,
+              "height": 57,
+              "left": 41,
+              "right": 752,
+              "top": 459,
+              "width": 711
+            },
+            "rendered": true
+          },
+          "duration": {
+            "intersects": true,
+            "present": true,
+            "rect": {
+              "bottom": 387,
+              "height": 14,
+              "left": 213.015625,
+              "right": 243.046875,
+              "top": 373,
+              "width": 30.03125
+            },
+            "rendered": true
+          },
+          "title": {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": -41,
+              "height": 28,
+              "left": 41,
+              "right": 722,
+              "top": -69,
+              "width": 681
+            },
+            "rendered": true
+          },
+          "uploader": {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": -54.25,
+              "height": 22.5,
+              "left": 842,
+              "right": 902.015625,
+              "top": -76.75,
+              "width": 60.015625
+            },
+            "rendered": true
+          }
+        },
+        "viewport": {
+          "height": 761,
+          "width": 1188
+        }
+      },
+      "metadata_states": {
+        "description": "visible",
+        "displayed_counts": "visible",
+        "duration": "visible",
+        "title": "not_visible",
+        "uploader": "not_visible"
+      },
+      "reservation_time": 1792911900.1217752,
+      "raw_url_preserved_in_private_capture": true,
+      "capture_sha256": "1bc3512615de0a33409fcf5f82e17ec68fd21cbc626d69d82177b05167494a6f",
+      "state": "applied",
+      "operation_binding_sha256": "3b1bfd7bdcb7e1fa485f1760ed956d2762729ee3dac76349fa24c66ab4a27866",
+      "private_operation_summary_sha256": "596c302663976afef8eb502549ac3ab9497d3de133d0af9ed2c0ff66b0e5b6f4",
+      "object_binding_sha256": "30dfc20dc35a74790f0c6d1aa449a02c06ce876c0d850f060c623fd97effd761"
+    },
+    {
+      "operation": "browser.comments.read",
+      "captured_at": 1792911916.054,
+      "captured_at_utc": "2026-10-25T07:05:16.054000+00:00",
+      "recipe_version": "host-capture-v1",
+      "complete": false,
+      "diagnostics": {
+        "intersecting_thread_count": 0,
+        "recognized_thread_count": 20,
+        "rendered_thread_count": 20,
+        "root_accessible": true,
+        "thread_geometry": [
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 987.5,
+              "height": 150.5,
+              "left": 41,
+              "right": 752,
+              "top": 837,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 1425,
+              "height": 437.5,
+              "left": 41,
+              "right": 752,
+              "top": 987.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 1673,
+              "height": 248,
+              "left": 41,
+              "right": 752,
+              "top": 1425,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 1895.5,
+              "height": 222.5,
+              "left": 41,
+              "right": 752,
+              "top": 1673,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 2142,
+              "height": 246.5,
+              "left": 41,
+              "right": 752,
+              "top": 1895.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 2385,
+              "height": 243,
+              "left": 41,
+              "right": 752,
+              "top": 2142,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 2705,
+              "height": 320,
+              "left": 41,
+              "right": 752,
+              "top": 2385,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 2906,
+              "height": 201,
+              "left": 41,
+              "right": 752,
+              "top": 2705,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 3325.5,
+              "height": 419.5,
+              "left": 41,
+              "right": 752,
+              "top": 2906,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 3526.5,
+              "height": 201,
+              "left": 41,
+              "right": 752,
+              "top": 3325.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 3752.5,
+              "height": 226,
+              "left": 41,
+              "right": 752,
+              "top": 3526.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 3952.5,
+              "height": 200,
+              "left": 41,
+              "right": 752,
+              "top": 3752.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 4153.5,
+              "height": 201,
+              "left": 41,
+              "right": 752,
+              "top": 3952.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 4377.5,
+              "height": 224,
+              "left": 41,
+              "right": 752,
+              "top": 4153.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 4625.5,
+              "height": 248,
+              "left": 41,
+              "right": 752,
+              "top": 4377.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 4850.5,
+              "height": 225,
+              "left": 41,
+              "right": 752,
+              "top": 4625.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 5050.5,
+              "height": 200,
+              "left": 41,
+              "right": 752,
+              "top": 4850.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 5254,
+              "height": 203.5,
+              "left": 41,
+              "right": 752,
+              "top": 5050.5,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 5454,
+              "height": 200,
+              "left": 41,
+              "right": 752,
+              "top": 5254,
+              "width": 711
+            },
+            "rendered": true
+          },
+          {
+            "intersects": false,
+            "present": true,
+            "rect": {
+              "bottom": 5655,
+              "height": 201,
+              "left": 41,
+              "right": 752,
+              "top": 5454,
+              "width": 711
+            },
+            "rendered": true
+          }
+        ],
+        "thread_geometry_truncated": false,
+        "viewport": {
+          "height": 761,
+          "width": 1188
+        }
+      },
+      "reservation_time": 1792911910.3131006,
+      "raw_url_preserved_in_private_capture": true,
+      "capture_sha256": "976f2b185c700f9f9050cd46e4897fe6bf613a02611be0d1ec2d0c4f2a037584",
+      "visible_threads": 0,
+      "state": "applied",
+      "operation_binding_sha256": "07a032e3afd10c670611b6e7323f5e79a0ce6e720484451bfc151aa4873cc085",
+      "private_operation_summary_sha256": "034c49adf72f44f4a8d52790316296becbf49329bc192b9e141898ae6d9e93f3",
+      "object_binding_sha256": "30dfc20dc35a74790f0c6d1aa449a02c06ce876c0d850f060c623fd97effd761"
+    }
+  ],
+  "case_review_status": "pass",
+  "independent_session": {
+    "initial_call": "await cua.getState()",
+    "remote_cloud_documentation_read": true,
+    "inherited_handles": false,
+    "authentication_session_reset": false,
+    "original_user_tabs_untouched": true,
+    "owned_tab_closed": true,
+    "definition": "Fresh fork-none execution worker/browser handle and fresh tab/context observation; same existing authorized authentication session, not an auth reset."
+  },
+  "query_target_alternate": true,
+  "facade": {
+    "entry": "facade.search_read (default real subprocess executor)",
+    "status_entry": "facade.status",
+    "native_chat_tool_registration": false,
+    "sha256sums_sha256": "c0cabb786dde948cb9e7a2a3531e5753fe428b9242ded701f8611f7c57a5dd32",
+    "status_verification": {
+      "identical_result": true,
+      "reservations_before": 24,
+      "reservations_after": 24,
+      "new_reservations": 0,
+      "journal_file_sha_unchanged_on_first_status": true
+    }
+  },
+  "incidental_effects": {
+    "account_writes": false,
+    "hidden_state_access": false,
+    "explicit_comment_scroll": false,
+    "autoplay_incidental": true,
+    "pause_clicks": 1
+  },
+  "independent_audit": {
+    "decision": "pass",
+    "reviewed": "Actual raw captures and read-only journal matched payload/time/hash and second-read to open dependency.",
+    "scope": "Finite five-primitive matrix only; no positive-comment-content live evidence claimed."
+  }
+}

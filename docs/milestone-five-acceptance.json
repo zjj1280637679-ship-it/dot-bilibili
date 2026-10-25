@@ -1,0 +1,1218 @@
+{
+  "schema_version": 1,
+  "milestone": "five-browser-primitives-v1",
+  "scope_version": "proposed-v1",
+  "base_public_commit": "6d5d98a3f8341e40ea077713a6829a49eedd53c0",
+  "created_utc": "2026-10-25T06:51:04.278513+00:00",
+  "strict_target": "5/5",
+  "strict_accepted": 5,
+  "all_business_denominator": 122,
+  "source_change": "Current 0.3.0 candidate adds narrow SelectionConsumer port and fixed host/workflow scripts; prior Python-only identity snapshot is historical, not current-version compatibility.",
+  "frozen_baseline_sha256": {
+    "control-primitives-v1.json": "7da07fdb2bef3737f04d1b2fcc4f8ec3643c2a55ee20a3bc0afebc349cc0280e",
+    "completion-metric-design.md": "2a6d49576e305a63be885d5f946eceaed73cdb270df7e8abd1d36510335b82be"
+  },
+  "test_run": {
+    "command": "python -m unittest discover -s tests -v",
+    "status": "pass",
+    "count": 261,
+    "log": "docs/milestone-five-offline-tests.txt",
+    "log_sha256": "ab5d568d3549ace9e6b96897701e18d31b8e4386e517865e00c695a80344e063",
+    "scope": "Frozen 261-test offline run before live chains; later additive facade/boundary tests are separate supplementary evidence, not silently substituted."
+  },
+  "leaves": [
+    {
+      "id": "comments.viewport.read",
+      "operation": "browser.comments.read",
+      "source": "bili_bridge/browser_comments_contracts.py",
+      "contract": {
+        "inputs": "exact BVID public URL/tab, integer limit 1–3",
+        "result": "viewport-intersecting open-shadow threads, explicit field absence/truncation, snapshot_position not stable ID, complete=false"
+      },
+      "offline_cases": [
+        {
+          "id": "O01",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O02",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O03",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O04",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O05",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O05_challenge_distinct_from_success_all_five",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O06",
+          "status": "pass",
+          "tests": [
+            "test_browser_host.BrowserHostTests.test_timeout_unknown_no_reuse",
+            "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O07",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_duplicate_and_immutable_identity"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O08",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_process_crash_recovery_retains_reservation_and_no_replay",
+            "test_browser_host.BrowserHostTests.test_dead_owner_not_replayed"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O09",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O09_absence_is_explicit_and_not_fabricated_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O10",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+            "test_browser_host.BrowserHostTests.test_roundtrip_and_cooldown"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O11",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O11_instructions_cannot_extend_envelope_all_five",
+            "test_browser_adversarial.BrowserAdversarialTests.test_untrusted_text_remains_inert_and_link_normalizes",
+            "test_browser_comments.CommentsContractTests.test_valid_partial_inert_text_and_explicit_absence",
+            "test_browser_video.VideoContractTests.test_explicit_absence_and_untrusted_text"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O12",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O12_identity_digest_time_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        }
+      ],
+      "live_cases": [
+        {
+          "id": "L01",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 4,
+              "operation_binding_sha256": "17547bc6f83e1d92df7567ae86fc4904d50165561b7e91cee08918e488ff8067",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Representative current-version object/parameter in chain A."
+        },
+        {
+          "id": "L02",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 4,
+              "operation_binding_sha256": "07a032e3afd10c670611b6e7323f5e79a0ce6e720484451bfc151aa4873cc085",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Different legal query and selected object in chain B."
+        },
+        {
+          "id": "L03",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 4,
+              "operation_binding_sha256": "07a032e3afd10c670611b6e7323f5e79a0ce6e720484451bfc151aa4873cc085",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Chain B independently initialized native execution host, no inherited handles, fresh tab/context; same existing auth session and durable journal, not auth/profile turnover."
+        },
+        {
+          "id": "L04",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 4,
+              "operation_binding_sha256": "17547bc6f83e1d92df7567ae86fc4904d50165561b7e91cee08918e488ff8067",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "A comments read: accessible open root, 4 rendered threads, 0 intersecting; observed threads empty, not a claim of no comments."
+        }
+      ],
+      "nonapplicable_cases": [],
+      "robust": "pass",
+      "accepted_for_release": true
+    },
+    {
+      "id": "search.query.submit",
+      "operation": "browser.public_search",
+      "source": "bili_bridge/browser_public_search_contracts.py",
+      "contract": {
+        "inputs": "query 1–200 nonblank characters; public source URL and tab",
+        "result": "fixed /en/all keyword URL, fresh capture, <=10 bounded video items; no generic navigation"
+      },
+      "offline_cases": [
+        {
+          "id": "O01",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O02",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O03",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O04",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O05",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O05_challenge_distinct_from_success_all_five",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O06",
+          "status": "pass",
+          "tests": [
+            "test_browser_host.BrowserHostTests.test_timeout_unknown_no_reuse",
+            "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O07",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_duplicate_and_immutable_identity"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O08",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_process_crash_recovery_retains_reservation_and_no_replay",
+            "test_browser_host.BrowserHostTests.test_dead_owner_not_replayed"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O09",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O09_absence_is_explicit_and_not_fabricated_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O10",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+            "test_browser_host.BrowserHostTests.test_roundtrip_and_cooldown"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O11",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O11_instructions_cannot_extend_envelope_all_five",
+            "test_browser_adversarial.BrowserAdversarialTests.test_untrusted_text_remains_inert_and_link_normalizes",
+            "test_browser_comments.CommentsContractTests.test_valid_partial_inert_text_and_explicit_absence",
+            "test_browser_video.VideoContractTests.test_explicit_absence_and_untrusted_text"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O12",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O12_identity_digest_time_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N01",
+          "status": "pass",
+          "tests": [
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_rejected_preflight_never_consumes_checkpoint"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N02",
+          "status": "pass",
+          "tests": [
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_order_single_use_durable_and_fresh_capture",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_write_error_never_returns_navigation_authority"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N03",
+          "status": "pass",
+          "tests": [
+            "test_browser_public_search.PublicSearchTests.test_reject_semantic_query_and_destinations"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        }
+      ],
+      "live_cases": [
+        {
+          "id": "L01",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 0,
+              "operation_binding_sha256": "981f083ea8a2c89434646f1e3b927d05a619b1706e47404ee75d445afc05e2b8",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Representative current-version object/parameter in chain A."
+        },
+        {
+          "id": "L02",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 0,
+              "operation_binding_sha256": "1d70cdab11b52e5ded702179904c8f5f92e79997247ba42b74a79000a6d3258c",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Different legal query and selected object in chain B."
+        },
+        {
+          "id": "L03",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 0,
+              "operation_binding_sha256": "1d70cdab11b52e5ded702179904c8f5f92e79997247ba42b74a79000a6d3258c",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Chain B independently initialized native execution host, no inherited handles, fresh tab/context; same existing auth session and durable journal, not auth/profile turnover."
+        }
+      ],
+      "nonapplicable_cases": [
+        {
+          "id": "L04",
+          "reason": "Frozen matrix assigns L04 only to reads; this is navigation, not a content-absence test."
+        },
+        {
+          "id": "N04",
+          "reason": "No source result snapshot consumed by query submission."
+        }
+      ],
+      "robust": "pass",
+      "accepted_for_release": true
+    },
+    {
+      "id": "search.results.visible.read",
+      "operation": "browser.search_results.read",
+      "source": "bili_bridge/browser_contracts.py",
+      "contract": {
+        "inputs": "query 1–200 characters, exact search URL/tab",
+        "result": "<=10 visible videos with title/BVID/canonical URL; uploader/duration may be empty; displayed_counts <=5; not entire-page completeness"
+      },
+      "offline_cases": [
+        {
+          "id": "O01",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O02",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O03",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O04",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O05",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O05_challenge_distinct_from_success_all_five",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O06",
+          "status": "pass",
+          "tests": [
+            "test_browser_host.BrowserHostTests.test_timeout_unknown_no_reuse",
+            "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O07",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_duplicate_and_immutable_identity"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O08",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_process_crash_recovery_retains_reservation_and_no_replay",
+            "test_browser_host.BrowserHostTests.test_dead_owner_not_replayed"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O09",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O09_absence_is_explicit_and_not_fabricated_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O10",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+            "test_browser_host.BrowserHostTests.test_roundtrip_and_cooldown"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O11",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O11_instructions_cannot_extend_envelope_all_five",
+            "test_browser_adversarial.BrowserAdversarialTests.test_untrusted_text_remains_inert_and_link_normalizes",
+            "test_browser_comments.CommentsContractTests.test_valid_partial_inert_text_and_explicit_absence",
+            "test_browser_video.VideoContractTests.test_explicit_absence_and_untrusted_text"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O12",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O12_identity_digest_time_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        }
+      ],
+      "live_cases": [
+        {
+          "id": "L01",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 1,
+              "operation_binding_sha256": "f68e149bb983d00f56939b2b63985cad299582a6f1934a35597ba59253e08afc",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Representative current-version object/parameter in chain A."
+        },
+        {
+          "id": "L02",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 1,
+              "operation_binding_sha256": "9c92676b8de9e43b421bffd5336d0c9b980b38d9304dad1665b3c5c74ea1dc12",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Different legal query and selected object in chain B."
+        },
+        {
+          "id": "L03",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 1,
+              "operation_binding_sha256": "9c92676b8de9e43b421bffd5336d0c9b980b38d9304dad1665b3c5c74ea1dc12",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Chain B independently initialized native execution host, no inherited handles, fresh tab/context; same existing auth session and durable journal, not auth/profile turnover."
+        },
+        {
+          "id": "L04",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 1,
+              "operation_binding_sha256": "f68e149bb983d00f56939b2b63985cad299582a6f1934a35597ba59253e08afc",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "A second results read: actual fifth captured card title/card intersect; duration hidden and displayed_counts empty."
+        }
+      ],
+      "nonapplicable_cases": [],
+      "robust": "pass",
+      "accepted_for_release": true
+    },
+    {
+      "id": "video.metadata.visible.read",
+      "operation": "browser.video_page.read",
+      "source": "bili_bridge/browser_video_contracts.py",
+      "contract": {
+        "inputs": "exact BVID, canonical public URL/tab",
+        "result": "title/uploader/description/duration/displayed_counts each visible or not_visible with null; bounded visible subset, never media/transcript inference"
+      },
+      "offline_cases": [
+        {
+          "id": "O01",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O02",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O03",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O04",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O05",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O05_challenge_distinct_from_success_all_five",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O06",
+          "status": "pass",
+          "tests": [
+            "test_browser_host.BrowserHostTests.test_timeout_unknown_no_reuse",
+            "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O07",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_duplicate_and_immutable_identity"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O08",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_process_crash_recovery_retains_reservation_and_no_replay",
+            "test_browser_host.BrowserHostTests.test_dead_owner_not_replayed"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O09",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O09_absence_is_explicit_and_not_fabricated_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O10",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+            "test_browser_host.BrowserHostTests.test_roundtrip_and_cooldown"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O11",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O11_instructions_cannot_extend_envelope_all_five",
+            "test_browser_adversarial.BrowserAdversarialTests.test_untrusted_text_remains_inert_and_link_normalizes",
+            "test_browser_comments.CommentsContractTests.test_valid_partial_inert_text_and_explicit_absence",
+            "test_browser_video.VideoContractTests.test_explicit_absence_and_untrusted_text"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O12",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O12_identity_digest_time_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        }
+      ],
+      "live_cases": [
+        {
+          "id": "L01",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 3,
+              "operation_binding_sha256": "7b6fe826435fc9059f1fac9d90d9b9abbaedb52122aeb779d8437351898750b3",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Representative current-version object/parameter in chain A."
+        },
+        {
+          "id": "L02",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 3,
+              "operation_binding_sha256": "3b1bfd7bdcb7e1fa485f1760ed956d2762729ee3dac76349fa24c66ab4a27866",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Different legal query and selected object in chain B."
+        },
+        {
+          "id": "L03",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 3,
+              "operation_binding_sha256": "3b1bfd7bdcb7e1fa485f1760ed956d2762729ee3dac76349fa24c66ab4a27866",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Chain B independently initialized native execution host, no inherited handles, fresh tab/context; same existing auth session and durable journal, not auth/profile turnover."
+        },
+        {
+          "id": "L04",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 3,
+              "operation_binding_sha256": "7b6fe826435fc9059f1fac9d90d9b9abbaedb52122aeb779d8437351898750b3",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "A metadata read: title/uploader rendered but offviewport, explicit not_visible."
+        }
+      ],
+      "nonapplicable_cases": [],
+      "robust": "pass",
+      "accepted_for_release": true
+    },
+    {
+      "id": "video.search_result.open",
+      "operation": "browser.video.open",
+      "source": "bili_bridge/browser_video_open_contracts.py",
+      "contract": {
+        "inputs": "BVID plus source_operation_id from applied journal search snapshot",
+        "result": "single-use source membership <=600s, unchanged visible anchor and source context; exact canonical video destination; no arbitrary URL"
+      },
+      "offline_cases": [
+        {
+          "id": "O01",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O02",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O03",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O04",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O05",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O05_challenge_distinct_from_success_all_five",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O06",
+          "status": "pass",
+          "tests": [
+            "test_browser_host.BrowserHostTests.test_timeout_unknown_no_reuse",
+            "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O07",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_duplicate_and_immutable_identity"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O08",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_process_crash_recovery_retains_reservation_and_no_replay",
+            "test_browser_host.BrowserHostTests.test_dead_owner_not_replayed"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O09",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O09_absence_is_explicit_and_not_fabricated_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O10",
+          "status": "pass",
+          "tests": [
+            "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+            "test_browser_host.BrowserHostTests.test_roundtrip_and_cooldown"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O11",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O11_instructions_cannot_extend_envelope_all_five",
+            "test_browser_adversarial.BrowserAdversarialTests.test_untrusted_text_remains_inert_and_link_normalizes",
+            "test_browser_comments.CommentsContractTests.test_valid_partial_inert_text_and_explicit_absence",
+            "test_browser_video.VideoContractTests.test_explicit_absence_and_untrusted_text"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "O12",
+          "status": "pass",
+          "tests": [
+            "test_milestone_five.FiveFrozenContracts.test_O12_identity_digest_time_all_five"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N01",
+          "status": "pass",
+          "tests": [
+            "test_browser_video_open.OpenRoundtrip.test_changed_anchor_blocked_before_navigation",
+            "test_browser_video_open.OpenContracts.test_stale_or_changed_selection_preflight"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N02",
+          "status": "pass",
+          "tests": [
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_order_single_use_durable_and_fresh_capture",
+            "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_write_error_never_returns_navigation_authority"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N03",
+          "status": "pass",
+          "tests": [
+            "test_browser_video_open.OpenContracts.test_receipt_mismatch_and_phase"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        },
+        {
+          "id": "N04",
+          "status": "pass",
+          "tests": [
+            "test_browser_video_open_adversarial_review.VideoOpenIndependentReviewTests.test_consumed_source_survives_block_unknown_and_kernel_reopen",
+            "test_browser_video_open.OpenRoundtrip.test_intervening_exchange_invalidates_snapshot"
+          ],
+          "evidence_kind": "synthetic_offline",
+          "layer": "contract_and_shared_infrastructure"
+        }
+      ],
+      "live_cases": [
+        {
+          "id": "L01",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-a.json",
+              "sha256": "a131f30654ae4f67e5c0978cc1fa0b2457b787940e6726f13f74b4ed3e147565",
+              "operation_index": 2,
+              "operation_binding_sha256": "826e72cf416c6948a368365028a5923f8b60f38de77082d29e0d1c3ac93432fd",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Representative current-version object/parameter in chain A."
+        },
+        {
+          "id": "L02",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 2,
+              "operation_binding_sha256": "c3ebbdcf87333f8302965dd56883ebe6883cc059b447b4c2aa6a5261ddb61ef9",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Different legal query and selected object in chain B."
+        },
+        {
+          "id": "L03",
+          "status": "pass",
+          "evidence": [
+            {
+              "path": "docs/evidence/strict-chain-b.json",
+              "sha256": "7a1f35b106de659c879f39e916d2ecd9c4fcda201a595e5472d035be9369dbd5",
+              "operation_index": 2,
+              "operation_binding_sha256": "c3ebbdcf87333f8302965dd56883ebe6883cc059b447b4c2aa6a5261ddb61ef9",
+              "kind": "trusted_host_live_browser_attestation"
+            }
+          ],
+          "condition": "Chain B independently initialized native execution host, no inherited handles, fresh tab/context; same existing auth session and durable journal, not auth/profile turnover."
+        }
+      ],
+      "nonapplicable_cases": [
+        {
+          "id": "L04",
+          "reason": "Frozen matrix assigns L04 only to reads; this is navigation, not a content-absence test."
+        }
+      ],
+      "robust": "pass",
+      "accepted_for_release": true
+    }
+  ],
+  "infrastructure_gates": [
+    {
+      "id": "G01",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five",
+        "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five"
+      ]
+    },
+    {
+      "id": "G02",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_kernel.KernelTests.test_exact_grant_account_target_payload_and_operation",
+        "test_adversarial.AdversarialTests.test_grant_cannot_cross_account_or_operation",
+        "test_milestone_five.FiveFrozenContracts.test_O02_closed_schema_all_five",
+        "test_browser_public_search.PublicSearchTests.test_preflight_strict_and_sanitized"
+      ]
+    },
+    {
+      "id": "G03",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_milestone_five.FiveFrozenContracts.test_O01_normal_all_five",
+        "test_milestone_five.FiveFrozenContracts.test_O03_target_and_context_all_five",
+        "test_milestone_five.FiveFrozenContracts.test_O04_expiration_all_five"
+      ]
+    },
+    {
+      "id": "G04",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_kernel.KernelTests.test_shared_budget_cross_plugin_and_persistent",
+        "test_kernel.KernelTests.test_shared_database_multiple_processes_budget",
+        "test_kernel.KernelTests.test_cooldown_and_clock_rollback"
+      ]
+    },
+    {
+      "id": "G05",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_milestone_five.FiveFrozenContracts.test_G05_durable_journal_precedes_adapter_and_failure_stops",
+        "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_order_single_use_durable_and_fresh_capture",
+        "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_checkpoint_write_error_never_returns_navigation_authority"
+      ]
+    },
+    {
+      "id": "G06",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_browser_video_open.OpenRoundtrip.test_search_open_video_read_chain_and_replay",
+        "test_navigation_adversarial.NavigationUnknownOutcomeTests.test_timeout_after_begin_is_unknown_and_kernel_never_replays"
+      ]
+    },
+    {
+      "id": "G07",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_browser_video.VideoContractTests.test_known_tracking_sanitized_before_persistence",
+        "test_adversarial.AdversarialTests.test_secret_named_payload_not_persisted",
+        "test_comments_adversarial.CommentsBoundaryAudit.test_secret_extrafields_at_every_projection_level"
+      ]
+    },
+    {
+      "id": "G08",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_browser_video.VideoCliTests.test_shared_transport_roundtrip_cli_and_replay",
+        "test_browser_cli.BrowserCliTests.test_no_host_fails_without_fixture_fallback"
+      ]
+    },
+    {
+      "id": "G09",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_preflight_block_finishes_without_navigation",
+        "test_navigation_adversarial.NavigationCheckpointAdversarialTests.test_rejected_preflight_never_consumes_checkpoint"
+      ]
+    },
+    {
+      "id": "G10",
+      "status": "pass",
+      "evidence_kind": "synthetic_offline",
+      "tests": [
+        "test_browser_video_open.OpenRoundtrip.test_search_open_video_read_chain_and_replay",
+        "test_milestone_five.FiveFrozenContracts.test_G10_partial_chain_retains_success_and_unknown_across_restart"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "bili_bridge/__init__.py": "53662dafc04097223bb58129ea281710fc7711aee9fe6ae139be71fa39246530",
+    "bili_bridge/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "bili_bridge/auth_broker.py": "7e967fac922e8ff5b0c212553ffc83944f387e4da1942b4e41f9d6e1b7c6b74d",
+    "bili_bridge/auth_contracts.py": "1e1e940669051fd34c300f6515ff71f2c9956ee75484f7e883f0b07101cb7a03",
+    "bili_bridge/browser_comment_fields.py": "9ac698e7d219773a5aaa41077db1743593b5fdf36c7157cfd4f9a07bd6a0e0a9",
+    "bili_bridge/browser_comments_contracts.py": "6458ea7c413293767172fc4796e06ab6a0f4cf098561922ea4a8bbef6f8c3299",
+    "bili_bridge/browser_comments_plugin.py": "c4bc8a6c991f394ed970e690a252fc13644aa28e22135604d0338ec5ea3560a4",
+    "bili_bridge/browser_contracts.py": "dacab48da3ee2b001c28c783861d3615fa32ae6fd25568a99d2175f8372d1559",
+    "bili_bridge/browser_host.py": "b3c0bd80399dce37236dbb6ff6f2dbfed32479bb2709e40c9f28a59083ae47ea",
+    "bili_bridge/browser_plugin.py": "d53b295f5411008e9c57ab65bbddf9b13392c75efdac466286e495d9ecb2e592",
+    "bili_bridge/browser_public_search_contracts.py": "9b7404e1e089d47ed055374f741a1969b20699a0b64ef7848c54e4fda973f32e",
+    "bili_bridge/browser_public_search_plugin.py": "0da0a78052fd04564531afc0508a85cbd3830cb3cddce6a3864523880c102a0e",
+    "bili_bridge/browser_registry.py": "f026f6ca8fdd0fe89237fed40cdf9ff4ad5064977a3799c2ccbca0b1a45b8afb",
+    "bili_bridge/browser_video_contracts.py": "cd4c1bd6b53e975716e30b4329b78c7dd06667d037ffb07ca067213c1076addc",
+    "bili_bridge/browser_video_open_contracts.py": "4adf6141a6e8f5a0cc9f6b49380054bd3fe65f56dc310f5ec515daec77ecdec6",
+    "bili_bridge/browser_video_open_plugin.py": "f593f19bed2b154afd60ff607efa108ff2a4a98616a958114eb6940fb725548d",
+    "bili_bridge/browser_video_plugin.py": "6f32b3e33c2eca8a981e0ed5125db0d30ee69c23758b460e34c65c32dd29eec4",
+    "bili_bridge/cli.py": "2149448463c8dcf323c6c39c791fe4b36e6ab4e8f84a7cea2c455fc8258737de",
+    "bili_bridge/contracts.py": "11ee58bae9f567627f34d5447b72e71d3ae0aae00a3552b38e29fc8a3d7a96fb",
+    "bili_bridge/fixtures.py": "424836b4cf9eb7f06f205423f57122cb8bc16f70522329a81aa3cf916620a143",
+    "bili_bridge/kernel.py": "a284f11898e63ef0bb784aea3c120a0bc32cdb798d024f226bfc80de7235a82e",
+    "bili_bridge/metadata_pipeline.py": "7d79b6b964dde86cb73f92384b84baebacdc77632d530815bc284a7b9741c303",
+    "bili_bridge/plugins.py": "356a77f54a4a011b9c70416a3c05cce6d6e194a50af7a6b300918469b2bfb2b5",
+    "bili_bridge/relays.py": "2551e0af6b13e7d2bed2d77b2b72440146d1d152d8d9520caa043053c9c4dc80",
+    "bili_bridge/selection_consumer.py": "a9668167b2d9c48dc8cf233e706971911c7548e2a5442933c83f6a25484c4396",
+    "formal/browser_public_search_model.py": "1b8951d1a7f867436969ad27bd87a3d2e61df833a30b50fbc28ff011251ae08e",
+    "formal/browser_relay_model.py": "2d06231fca05380d2691b84878d041512eb9f994a7a9dc763c9a3351b94b6f66",
+    "formal/browser_video_open_model.py": "97cc9ef74d1829356230dbbed0df693774f889b57f996579c727e4a01520be69",
+    "formal/model.py": "9ad677291ca5e6901fa09651980e962483eb341137788c399bca4094813c5ba4",
+    "formal/relay_model.py": "cb81d49f776aaed2d21559075cda13d1555d3d7fa74df166a78decf195726151",
+    "pyproject.toml": "09ca6a7ad1a1213d125707d33da79b3e91ec61746950537ec8a59aee1ccfcb67",
+    "scripts/browser_host_exchange.py": "939a5239e8a420d95be7edea1a3a963ac7cd581c868fbaeba912362586784fa8",
+    "scripts/check_milestone_five.py": "0e36b3fae7d6a97814081273543a8a59a682c23e3fc3e7dc9523efb6f5a03693",
+    "scripts/check_model.py": "65fd6b8c4f1f5eb3207c3ddc767b1c94dececb5627775c81d8d594eb52ec3d38",
+    "scripts/check_verification_budget.py": "179d0ebbea8a398644b20b6c2e58d3a6dd62259c2cd1cf8b4f83f8cde869ebb1",
+    "scripts/host_capture_recipes.js": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+    "scripts/host_capture_smoke.cjs": "3319ddb6d2e1a6e8341a1e1311927415c6ab421a2d9a4887c69c26275d6bf623",
+    "scripts/host_projection_recipe.js": "b5af06c4954bafdfaf54b4f334ee3618a4bf0136ab10d71cd7a1ae2841b01b07",
+    "scripts/host_projection_smoke.cjs": "3ed7a7a6b138319eed7e18ac74097f7a62af60ddebb7939a2be8c512e2e6f847",
+    "scripts/qr_login_trial.py": "5102f700033d70e61dea892d9e5eff598c4e6b0671f451ee41863bf995a0510e",
+    "scripts/read_workflow.py": "f483f326da5211df7c79cddd9607aaa81579e9f99c1ca9162764fbee846b5529",
+    "tests/test_adversarial.py": "cf8c4d2776537abebdfa37ab2ece2455b0c7b4a21f885d38259ef41e8b4d5f82",
+    "tests/test_browser_adversarial.py": "425eb16a38ec2e626f606b7533c7f500d0d88334d98167827c8792fc7fac7908",
+    "tests/test_browser_cli.py": "17201cbb35e7a10d240c22143a1d9e9dc40365c96fd4eb398813e8ee6cc66748",
+    "tests/test_browser_comments.py": "170835713152168a216a3c5a55af53198ec4f58a725dfacc0b46a426c7cb7d9d",
+    "tests/test_browser_host.py": "02cbbeb912b692354b0b86715634c2cd3174b330dc6d7ad44581a97fe2c59612",
+    "tests/test_browser_model.py": "2c1a0d2c384ad1a18f36282e2b158e764900549d8027a078fb87b262b5aa14c5",
+    "tests/test_browser_public_search.py": "432e566748d9a96c99054c1e564714e66fbfd1c08d50fb21f223aaeaac603f47",
+    "tests/test_browser_public_search_model.py": "8fee4911bb116e26dc62deb02c9a090a575decec3ad2232408a4b5bf7ceb9e84",
+    "tests/test_browser_video.py": "927de2c6702d711fe0f35805135fc865a2b1dc4d8ff5583c45a8df9d48d8aee3",
+    "tests/test_browser_video_open.py": "0bdb25417eb4160c982fbe734e61ec2024525a64e0ecf4b44b0f431341d9888d",
+    "tests/test_browser_video_open_adversarial_review.py": "ec75b9acb6f75d5595d5360d4d89bcdab3502981fe465804fb3a682e0036ec60",
+    "tests/test_browser_video_open_model.py": "c9c869d69f9f32bedfedcd92648a6b535a9dcc842ade33e998d0f6f7d77dc256",
+    "tests/test_cli.py": "80c609ab0d249b1a04fbbfbda9b0cdd3bb00bc449bf329dc59529858988486eb",
+    "tests/test_comments_adversarial.py": "a44f34b65e25a2a18976e00d341fdc0e740b80c3bdef4ff21ad91898af81386d",
+    "tests/test_kernel.py": "fd574d48cfb9d98bce0b7384ed68df8b08691409516f0c3100e32f7a25b3c4a8",
+    "tests/test_milestone_five.py": "cd7f20b1e2e503627cdb732e29a8d47ba4f2cf67e5baeb5adaef45aed1da88cc",
+    "tests/test_model.py": "16008fdc4fa791b1a13854b31c527850946148e3dd455bcc80c54f05ac96b675",
+    "tests/test_navigation_adversarial.py": "0d73098d140717de56d5831aa0fe9c18bae2c13b430ed68e9c8d005d5e436cac",
+    "tests/test_plugins.py": "0f26ba5d0c695c5bcec9199da0ae0a463ec7575ef9ae7bf5bfb2cf67f9f60b0b",
+    "tests/test_qr_adversarial.py": "e3483fbba009b6bc1bfe3e2f168df9adc58690dab9ae5ba970728ea1ce1342e7",
+    "tests/test_qr_trial.py": "591846127815408981092e82b2b201101c97746190db1ccfc881ebea42fd61d6",
+    "tests/test_read_workflow.py": "9f4349980d06bb5e4da4a9f3afc29d4ee54ca08b84dd67ef571b92c705aa4e0e",
+    "tests/test_read_workflow_audit.py": "5c55c782876d564d6f47c9f63aec3876e13474cad303f2571316415f23df6d3b",
+    "tests/test_relays.py": "c94b0667bc386b28c843a9638b2d1a203aac13427272e9797979ae80694a43a2",
+    "tests/test_selection_consumer.py": "bcf09f152465705cd46da7d84d7afbb1fc1b62d964e183f5e91edee925fe2ba1",
+    "tests/test_verification_budget.py": "f61325d2cb7c75a08333a132c8411a6c9a43d315724da72a46f512833d5149d3"
+  },
+  "limitations": [
+    "Offline host attestations do not prove browser geometry or trusted human authorization.",
+    "G02 write-grant tests exercise infrastructure synthetically; these five operations have no external-write authorization requirement. Trusted host must bind user-confirmed current session before live execution.",
+    "G07 forbids secret envelope fields and credential acquisition; cannot prove provenance of arbitrary public text supplied by trusted host.",
+    "Accepted live evidence is trusted-host attestation independently reviewed against private captures/journal; public hash checks do not prove DOM truth.",
+    "Prior 10 ad hoc observations with URL-canonicalization defect remain excluded from strict acceptance.",
+    "Both strict chains observed an empty comments viewport. Positive comment-content live extraction is not demonstrated; applicable frozen L01/L02 accept valid empty viewport responses and L04 explicitly verifies empty visibility.",
+    "Scope is five-primitive milestone only, not all 122 business leaves, native tool installation, security sandboxing or formal end-to-end proof."
+  ],
+  "candidate_version": "0.3.0",
+  "host_recipe_checks": [
+    {
+      "command": "node scripts/host_capture_smoke.cjs",
+      "status": "pass",
+      "kind": "synthetic_dom_not_live"
+    },
+    {
+      "command": "node scripts/host_projection_smoke.cjs",
+      "status": "pass",
+      "kind": "synthetic_dom_not_live"
+    }
+  ],
+  "unresolved_high_severity_defects": [],
+  "source_compatibility_evidence": {
+    "path": "docs/milestone-five-source-compatibility.json",
+    "sha256": "34a6cd2bdb3e6ca2eca7f8a75340ee46a6d5edb8b32a856ffc707b9d92ce3321"
+  },
+  "l03_predeclared_session_definition": "Fresh fork-none native execution worker first cua.getState, fresh browser handle without inherited REPL handles, fresh tab observation, new FileBrowserHost owner using same durable DB/spool; not authentication/profile turnover.",
+  "candidate_frozen_at_utc": "2026-10-25T06:52:00.051727+00:00",
+  "host_recipe_audit": {
+    "status": "pass",
+    "version": "host-capture-v1",
+    "source_sha256": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+    "scope": "Fixed read-only capture + bounded same-capture geometry outside receipt; no historic ad hoc evidence relabelled."
+  },
+  "accepted_at_utc": "2026-10-25T07:09:28.388470+00:00",
+  "accepted_runtime_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+  "administrative_checker_revision": "Post-live evidence checker strengthened to verify physical public proof files, SHA256 and operation/source binding. No frozen execution/runtime/workflow/recipe/test files changed."
+}

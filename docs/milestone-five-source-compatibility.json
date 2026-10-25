@@ -1,0 +1,316 @@
+{
+  "candidate_version": "0.3.0",
+  "note": "Current comparison after narrow SelectionConsumer port/version bump; does not promote historic evidence.",
+  "comparisons": {
+    "bili-release-web-chain/bilibili-bridge": {
+      "all_runtime_python_identical": false,
+      "files": [
+        {
+          "path": "bili_bridge/__init__.py",
+          "public_sha256": "53662dafc04097223bb58129ea281710fc7711aee9fe6ae139be71fa39246530",
+          "compared_sha256": "1584055fef22c2b5006974fedb268efdc6275c09029c64b02f8060801690c672",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/__main__.py",
+          "public_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "compared_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/auth_broker.py",
+          "public_sha256": "7e967fac922e8ff5b0c212553ffc83944f387e4da1942b4e41f9d6e1b7c6b74d",
+          "compared_sha256": "7e967fac922e8ff5b0c212553ffc83944f387e4da1942b4e41f9d6e1b7c6b74d",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/auth_contracts.py",
+          "public_sha256": "1e1e940669051fd34c300f6515ff71f2c9956ee75484f7e883f0b07101cb7a03",
+          "compared_sha256": "1e1e940669051fd34c300f6515ff71f2c9956ee75484f7e883f0b07101cb7a03",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comment_fields.py",
+          "public_sha256": "9ac698e7d219773a5aaa41077db1743593b5fdf36c7157cfd4f9a07bd6a0e0a9",
+          "compared_sha256": "9ac698e7d219773a5aaa41077db1743593b5fdf36c7157cfd4f9a07bd6a0e0a9",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comments_contracts.py",
+          "public_sha256": "6458ea7c413293767172fc4796e06ab6a0f4cf098561922ea4a8bbef6f8c3299",
+          "compared_sha256": "6458ea7c413293767172fc4796e06ab6a0f4cf098561922ea4a8bbef6f8c3299",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comments_plugin.py",
+          "public_sha256": "c4bc8a6c991f394ed970e690a252fc13644aa28e22135604d0338ec5ea3560a4",
+          "compared_sha256": "c4bc8a6c991f394ed970e690a252fc13644aa28e22135604d0338ec5ea3560a4",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_contracts.py",
+          "public_sha256": "dacab48da3ee2b001c28c783861d3615fa32ae6fd25568a99d2175f8372d1559",
+          "compared_sha256": "dacab48da3ee2b001c28c783861d3615fa32ae6fd25568a99d2175f8372d1559",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_host.py",
+          "public_sha256": "b3c0bd80399dce37236dbb6ff6f2dbfed32479bb2709e40c9f28a59083ae47ea",
+          "compared_sha256": "b3c0bd80399dce37236dbb6ff6f2dbfed32479bb2709e40c9f28a59083ae47ea",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_plugin.py",
+          "public_sha256": "d53b295f5411008e9c57ab65bbddf9b13392c75efdac466286e495d9ecb2e592",
+          "compared_sha256": "d53b295f5411008e9c57ab65bbddf9b13392c75efdac466286e495d9ecb2e592",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_public_search_contracts.py",
+          "public_sha256": "9b7404e1e089d47ed055374f741a1969b20699a0b64ef7848c54e4fda973f32e",
+          "compared_sha256": "9b7404e1e089d47ed055374f741a1969b20699a0b64ef7848c54e4fda973f32e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_public_search_plugin.py",
+          "public_sha256": "0da0a78052fd04564531afc0508a85cbd3830cb3cddce6a3864523880c102a0e",
+          "compared_sha256": "0da0a78052fd04564531afc0508a85cbd3830cb3cddce6a3864523880c102a0e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_registry.py",
+          "public_sha256": "f026f6ca8fdd0fe89237fed40cdf9ff4ad5064977a3799c2ccbca0b1a45b8afb",
+          "compared_sha256": "f026f6ca8fdd0fe89237fed40cdf9ff4ad5064977a3799c2ccbca0b1a45b8afb",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_contracts.py",
+          "public_sha256": "cd4c1bd6b53e975716e30b4329b78c7dd06667d037ffb07ca067213c1076addc",
+          "compared_sha256": "cd4c1bd6b53e975716e30b4329b78c7dd06667d037ffb07ca067213c1076addc",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_open_contracts.py",
+          "public_sha256": "4adf6141a6e8f5a0cc9f6b49380054bd3fe65f56dc310f5ec515daec77ecdec6",
+          "compared_sha256": "4adf6141a6e8f5a0cc9f6b49380054bd3fe65f56dc310f5ec515daec77ecdec6",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_open_plugin.py",
+          "public_sha256": "f593f19bed2b154afd60ff607efa108ff2a4a98616a958114eb6940fb725548d",
+          "compared_sha256": "55fd8e9f48c0111647feb3adf324138c776b106e0d29209d8922319f4e761b1e",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/browser_video_plugin.py",
+          "public_sha256": "6f32b3e33c2eca8a981e0ed5125db0d30ee69c23758b460e34c65c32dd29eec4",
+          "compared_sha256": "6f32b3e33c2eca8a981e0ed5125db0d30ee69c23758b460e34c65c32dd29eec4",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/cli.py",
+          "public_sha256": "2149448463c8dcf323c6c39c791fe4b36e6ab4e8f84a7cea2c455fc8258737de",
+          "compared_sha256": "d7cb31c3ab2e22bdadda5f474a94695d7089ff8caaa08cbf7817c6dae7c75abc",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/contracts.py",
+          "public_sha256": "11ee58bae9f567627f34d5447b72e71d3ae0aae00a3552b38e29fc8a3d7a96fb",
+          "compared_sha256": "11ee58bae9f567627f34d5447b72e71d3ae0aae00a3552b38e29fc8a3d7a96fb",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/fixtures.py",
+          "public_sha256": "424836b4cf9eb7f06f205423f57122cb8bc16f70522329a81aa3cf916620a143",
+          "compared_sha256": "424836b4cf9eb7f06f205423f57122cb8bc16f70522329a81aa3cf916620a143",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/kernel.py",
+          "public_sha256": "a284f11898e63ef0bb784aea3c120a0bc32cdb798d024f226bfc80de7235a82e",
+          "compared_sha256": "a284f11898e63ef0bb784aea3c120a0bc32cdb798d024f226bfc80de7235a82e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/metadata_pipeline.py",
+          "public_sha256": "7d79b6b964dde86cb73f92384b84baebacdc77632d530815bc284a7b9741c303",
+          "compared_sha256": "7d79b6b964dde86cb73f92384b84baebacdc77632d530815bc284a7b9741c303",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/plugins.py",
+          "public_sha256": "356a77f54a4a011b9c70416a3c05cce6d6e194a50af7a6b300918469b2bfb2b5",
+          "compared_sha256": "356a77f54a4a011b9c70416a3c05cce6d6e194a50af7a6b300918469b2bfb2b5",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/relays.py",
+          "public_sha256": "2551e0af6b13e7d2bed2d77b2b72440146d1d152d8d9520caa043053c9c4dc80",
+          "compared_sha256": "2551e0af6b13e7d2bed2d77b2b72440146d1d152d8d9520caa043053c9c4dc80",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/selection_consumer.py",
+          "public_sha256": "a9668167b2d9c48dc8cf233e706971911c7548e2a5442933c83f6a25484c4396",
+          "compared_sha256": null,
+          "identical": false
+        }
+      ]
+    },
+    "bilibili-bridge": {
+      "all_runtime_python_identical": false,
+      "files": [
+        {
+          "path": "bili_bridge/__init__.py",
+          "public_sha256": "53662dafc04097223bb58129ea281710fc7711aee9fe6ae139be71fa39246530",
+          "compared_sha256": "1584055fef22c2b5006974fedb268efdc6275c09029c64b02f8060801690c672",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/__main__.py",
+          "public_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "compared_sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/auth_broker.py",
+          "public_sha256": "7e967fac922e8ff5b0c212553ffc83944f387e4da1942b4e41f9d6e1b7c6b74d",
+          "compared_sha256": "7e967fac922e8ff5b0c212553ffc83944f387e4da1942b4e41f9d6e1b7c6b74d",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/auth_contracts.py",
+          "public_sha256": "1e1e940669051fd34c300f6515ff71f2c9956ee75484f7e883f0b07101cb7a03",
+          "compared_sha256": "1e1e940669051fd34c300f6515ff71f2c9956ee75484f7e883f0b07101cb7a03",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comment_fields.py",
+          "public_sha256": "9ac698e7d219773a5aaa41077db1743593b5fdf36c7157cfd4f9a07bd6a0e0a9",
+          "compared_sha256": "9ac698e7d219773a5aaa41077db1743593b5fdf36c7157cfd4f9a07bd6a0e0a9",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comments_contracts.py",
+          "public_sha256": "6458ea7c413293767172fc4796e06ab6a0f4cf098561922ea4a8bbef6f8c3299",
+          "compared_sha256": "6458ea7c413293767172fc4796e06ab6a0f4cf098561922ea4a8bbef6f8c3299",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_comments_plugin.py",
+          "public_sha256": "c4bc8a6c991f394ed970e690a252fc13644aa28e22135604d0338ec5ea3560a4",
+          "compared_sha256": "c4bc8a6c991f394ed970e690a252fc13644aa28e22135604d0338ec5ea3560a4",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_contracts.py",
+          "public_sha256": "dacab48da3ee2b001c28c783861d3615fa32ae6fd25568a99d2175f8372d1559",
+          "compared_sha256": "dacab48da3ee2b001c28c783861d3615fa32ae6fd25568a99d2175f8372d1559",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_host.py",
+          "public_sha256": "b3c0bd80399dce37236dbb6ff6f2dbfed32479bb2709e40c9f28a59083ae47ea",
+          "compared_sha256": "b3c0bd80399dce37236dbb6ff6f2dbfed32479bb2709e40c9f28a59083ae47ea",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_plugin.py",
+          "public_sha256": "d53b295f5411008e9c57ab65bbddf9b13392c75efdac466286e495d9ecb2e592",
+          "compared_sha256": "d53b295f5411008e9c57ab65bbddf9b13392c75efdac466286e495d9ecb2e592",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_public_search_contracts.py",
+          "public_sha256": "9b7404e1e089d47ed055374f741a1969b20699a0b64ef7848c54e4fda973f32e",
+          "compared_sha256": "9b7404e1e089d47ed055374f741a1969b20699a0b64ef7848c54e4fda973f32e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_public_search_plugin.py",
+          "public_sha256": "0da0a78052fd04564531afc0508a85cbd3830cb3cddce6a3864523880c102a0e",
+          "compared_sha256": "0da0a78052fd04564531afc0508a85cbd3830cb3cddce6a3864523880c102a0e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_registry.py",
+          "public_sha256": "f026f6ca8fdd0fe89237fed40cdf9ff4ad5064977a3799c2ccbca0b1a45b8afb",
+          "compared_sha256": "f026f6ca8fdd0fe89237fed40cdf9ff4ad5064977a3799c2ccbca0b1a45b8afb",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_contracts.py",
+          "public_sha256": "cd4c1bd6b53e975716e30b4329b78c7dd06667d037ffb07ca067213c1076addc",
+          "compared_sha256": "cd4c1bd6b53e975716e30b4329b78c7dd06667d037ffb07ca067213c1076addc",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_open_contracts.py",
+          "public_sha256": "4adf6141a6e8f5a0cc9f6b49380054bd3fe65f56dc310f5ec515daec77ecdec6",
+          "compared_sha256": "4adf6141a6e8f5a0cc9f6b49380054bd3fe65f56dc310f5ec515daec77ecdec6",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/browser_video_open_plugin.py",
+          "public_sha256": "f593f19bed2b154afd60ff607efa108ff2a4a98616a958114eb6940fb725548d",
+          "compared_sha256": "55fd8e9f48c0111647feb3adf324138c776b106e0d29209d8922319f4e761b1e",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/browser_video_plugin.py",
+          "public_sha256": "6f32b3e33c2eca8a981e0ed5125db0d30ee69c23758b460e34c65c32dd29eec4",
+          "compared_sha256": "6f32b3e33c2eca8a981e0ed5125db0d30ee69c23758b460e34c65c32dd29eec4",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/cli.py",
+          "public_sha256": "2149448463c8dcf323c6c39c791fe4b36e6ab4e8f84a7cea2c455fc8258737de",
+          "compared_sha256": "d7cb31c3ab2e22bdadda5f474a94695d7089ff8caaa08cbf7817c6dae7c75abc",
+          "identical": false
+        },
+        {
+          "path": "bili_bridge/contracts.py",
+          "public_sha256": "11ee58bae9f567627f34d5447b72e71d3ae0aae00a3552b38e29fc8a3d7a96fb",
+          "compared_sha256": "11ee58bae9f567627f34d5447b72e71d3ae0aae00a3552b38e29fc8a3d7a96fb",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/fixtures.py",
+          "public_sha256": "424836b4cf9eb7f06f205423f57122cb8bc16f70522329a81aa3cf916620a143",
+          "compared_sha256": "424836b4cf9eb7f06f205423f57122cb8bc16f70522329a81aa3cf916620a143",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/kernel.py",
+          "public_sha256": "a284f11898e63ef0bb784aea3c120a0bc32cdb798d024f226bfc80de7235a82e",
+          "compared_sha256": "a284f11898e63ef0bb784aea3c120a0bc32cdb798d024f226bfc80de7235a82e",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/metadata_pipeline.py",
+          "public_sha256": "7d79b6b964dde86cb73f92384b84baebacdc77632d530815bc284a7b9741c303",
+          "compared_sha256": "7d79b6b964dde86cb73f92384b84baebacdc77632d530815bc284a7b9741c303",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/plugins.py",
+          "public_sha256": "356a77f54a4a011b9c70416a3c05cce6d6e194a50af7a6b300918469b2bfb2b5",
+          "compared_sha256": "356a77f54a4a011b9c70416a3c05cce6d6e194a50af7a6b300918469b2bfb2b5",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/relays.py",
+          "public_sha256": "2551e0af6b13e7d2bed2d77b2b72440146d1d152d8d9520caa043053c9c4dc80",
+          "compared_sha256": "2551e0af6b13e7d2bed2d77b2b72440146d1d152d8d9520caa043053c9c4dc80",
+          "identical": true
+        },
+        {
+          "path": "bili_bridge/selection_consumer.py",
+          "public_sha256": "a9668167b2d9c48dc8cf233e706971911c7548e2a5442933c83f6a25484c4396",
+          "compared_sha256": null,
+          "identical": false
+        }
+      ]
+    }
+  }
+}

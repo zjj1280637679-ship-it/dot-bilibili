@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "measured_at_utc": "2026-10-25T06:48:36.055286+00:00",
+  "ok": true,
+  "scope": "Finite abstract safety models only; not code proof or end-to-end composition proof",
+  "budget_status": "INITIAL engineering limits, not universal complexity thresholds",
+  "budgets": {
+    "max_states": 10000,
+    "max_seconds": 5.0,
+    "max_memory_bytes": 33554432,
+    "max_dependencies": 16,
+    "max_wide_kernel_injections": 0
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "machine": "x86_64"
+  },
+  "models": {
+    "lifecycle_00": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 532,
+      "explored_states": 532,
+      "edges": 1300,
+      "elapsed_seconds": 0.07617256799949246,
+      "peak_traced_bytes": 309414,
+      "observed_field_cardinalities": {
+        "operations.0.attempts": 2,
+        "operations.0.authorized_sends": 1,
+        "operations.0.durable": 2,
+        "operations.0.effects": 2,
+        "operations.0.grant": 4,
+        "operations.0.stage": 7,
+        "operations.1.attempts": 2,
+        "operations.1.authorized_sends": 1,
+        "operations.1.durable": 2,
+        "operations.1.effects": 2,
+        "operations.1.grant": 4,
+        "operations.1.stage": 7,
+        "used": 3
+      },
+      "observed_marginal_product": 150528,
+      "observed_marginal_bits": 17.199672344836365,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.006584515999747964,
+      "original_enumerator_states": 532,
+      "reference_agrees": true
+    },
+    "lifecycle_01": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 676,
+      "explored_states": 676,
+      "edges": 1888,
+      "elapsed_seconds": 0.09405763500035391,
+      "peak_traced_bytes": 323158,
+      "observed_field_cardinalities": {
+        "operations.0.attempts": 2,
+        "operations.0.authorized_sends": 1,
+        "operations.0.durable": 2,
+        "operations.0.effects": 2,
+        "operations.0.grant": 4,
+        "operations.0.stage": 7,
+        "operations.1.attempts": 2,
+        "operations.1.authorized_sends": 1,
+        "operations.1.durable": 2,
+        "operations.1.effects": 2,
+        "operations.1.grant": 4,
+        "operations.1.stage": 7,
+        "used": 3
+      },
+      "observed_marginal_product": 150528,
+      "observed_marginal_bits": 17.199672344836365,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.00930139499996585,
+      "original_enumerator_states": 676,
+      "reference_agrees": true
+    },
+    "lifecycle_10": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 676,
+      "explored_states": 676,
+      "edges": 1888,
+      "elapsed_seconds": 0.093180105999636,
+      "peak_traced_bytes": 219686,
+      "observed_field_cardinalities": {
+        "operations.0.attempts": 2,
+        "operations.0.authorized_sends": 1,
+        "operations.0.durable": 2,
+        "operations.0.effects": 2,
+        "operations.0.grant": 4,
+        "operations.0.stage": 7,
+        "operations.1.attempts": 2,
+        "operations.1.authorized_sends": 1,
+        "operations.1.durable": 2,
+        "operations.1.effects": 2,
+        "operations.1.grant": 4,
+        "operations.1.stage": 7,
+        "used": 3
+      },
+      "observed_marginal_product": 150528,
+      "observed_marginal_bits": 17.199672344836365,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.00995839999995951,
+      "original_enumerator_states": 676,
+      "reference_agrees": true
+    },
+    "lifecycle_11": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 532,
+      "explored_states": 532,
+      "edges": 1300,
+      "elapsed_seconds": 0.0707632569992711,
+      "peak_traced_bytes": 178502,
+      "observed_field_cardinalities": {
+        "operations.0.attempts": 2,
+        "operations.0.authorized_sends": 1,
+        "operations.0.durable": 2,
+        "operations.0.effects": 2,
+        "operations.0.grant": 4,
+        "operations.0.stage": 7,
+        "operations.1.attempts": 2,
+        "operations.1.authorized_sends": 1,
+        "operations.1.durable": 2,
+        "operations.1.effects": 2,
+        "operations.1.grant": 4,
+        "operations.1.stage": 7,
+        "used": 3
+      },
+      "observed_marginal_product": 150528,
+      "observed_marginal_bits": 17.199672344836365,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.006913781000548624,
+      "original_enumerator_states": 532,
+      "reference_agrees": true
+    },
+    "relay": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 50,
+      "explored_states": 50,
+      "edges": 420,
+      "elapsed_seconds": 0.010437093000291497,
+      "peak_traced_bytes": 32259,
+      "observed_field_cardinalities": {
+        "packets.0.accepted_scope": 1,
+        "packets.0.hop": 4,
+        "packets.0.journal": 2,
+        "packets.0.path.0": 1,
+        "packets.0.path.1": 1,
+        "packets.0.path.2": 1,
+        "packets.0.status": 4,
+        "packets.1.accepted_scope": 1,
+        "packets.1.hop": 4,
+        "packets.1.journal": 2,
+        "packets.1.path.0": 1,
+        "packets.1.path.1": 1,
+        "packets.1.path.2": 1,
+        "packets.1.status": 4,
+        "used": 2
+      },
+      "observed_marginal_product": 2048,
+      "observed_marginal_bits": 11.0,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.0015564650002488634,
+      "original_enumerator_states": 50,
+      "reference_agrees": true
+    },
+    "browser_relay": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 40,
+      "explored_states": 40,
+      "edges": 151,
+      "elapsed_seconds": 0.002120524000019941,
+      "peak_traced_bytes": 17666,
+      "observed_field_cardinalities": {
+        "alive": 2,
+        "claims": 2,
+        "cooldown": 2,
+        "fresh": 2,
+        "matched": 1,
+        "observations": 2,
+        "stage": 5,
+        "terminal_seen": 2
+      },
+      "observed_marginal_product": 320,
+      "observed_marginal_bits": 8.321928094887362,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.00024465000024065375,
+      "original_enumerator_states": 40,
+      "reference_agrees": true
+    },
+    "browser_public_search": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 84,
+      "explored_states": 84,
+      "edges": 303,
+      "elapsed_seconds": 0.006131081000603444,
+      "peak_traced_bytes": 43092,
+      "observed_field_cardinalities": {
+        "alive": 2,
+        "capture_matched": 1,
+        "captures": 2,
+        "checkpoint_durable": 2,
+        "checkpoints": 2,
+        "claims": 2,
+        "cooldown": 2,
+        "fresh": 2,
+        "navigation_authorized": 1,
+        "navigations": 2,
+        "source_verified": 2,
+        "stage": 8,
+        "terminal_seen": 2
+      },
+      "observed_marginal_product": 8192,
+      "observed_marginal_bits": 13.0,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.0007912820001365617,
+      "original_enumerator_states": 84,
+      "reference_agrees": true
+    },
+    "browser_video_open": {
+      "ok": true,
+      "status": "complete",
+      "reason": null,
+      "states": 102,
+      "explored_states": 102,
+      "edges": 324,
+      "elapsed_seconds": 0.007325564999518974,
+      "peak_traced_bytes": 51496,
+      "observed_field_cardinalities": {
+        "alive": 2,
+        "capture_valid": 1,
+        "captures": 2,
+        "claims": 2,
+        "consumes": 2,
+        "durable": 2,
+        "fresh": 2,
+        "latest": 2,
+        "navigation_valid": 1,
+        "navigations": 2,
+        "preflight_valid": 2,
+        "provenance_valid": 1,
+        "stage": 9,
+        "terminal_seen": 2
+      },
+      "observed_marginal_product": 9216,
+      "observed_marginal_bits": 13.169925001442312,
+      "measurement": "tracemalloc enabled; not process RSS; partial domains if incomplete",
+      "original_enumerator_seconds": 0.0008473039997625165,
+      "original_enumerator_states": 102,
+      "reference_agrees": true
+    }
+  },
+  "dependencies": {
+    "graph": {
+      "__init__": [],
+      "__main__": [
+        "cli"
+      ],
+      "auth_broker": [
+        "auth_contracts"
+      ],
+      "auth_contracts": [],
+      "browser_comment_fields": [
+        "browser_contracts"
+      ],
+      "browser_comments_contracts": [
+        "browser_comment_fields",
+        "browser_contracts",
+        "browser_video_contracts"
+      ],
+      "browser_comments_plugin": [
+        "browser_comments_contracts",
+        "browser_host",
+        "contracts",
+        "relays"
+      ],
+      "browser_contracts": [],
+      "browser_host": [
+        "browser_comments_contracts",
+        "browser_contracts",
+        "browser_registry",
+        "browser_video_contracts"
+      ],
+      "browser_plugin": [
+        "browser_host",
+        "contracts",
+        "relays"
+      ],
+      "browser_public_search_contracts": [
+        "browser_contracts",
+        "browser_video_contracts"
+      ],
+      "browser_public_search_plugin": [
+        "browser_host",
+        "browser_public_search_contracts",
+        "contracts",
+        "relays"
+      ],
+      "browser_registry": [],
+      "browser_video_contracts": [
+        "browser_contracts"
+      ],
+      "browser_video_open_contracts": [
+        "browser_contracts",
+        "browser_public_search_contracts",
+        "browser_video_contracts"
+      ],
+      "browser_video_open_plugin": [
+        "browser_host",
+        "browser_video_open_contracts",
+        "contracts",
+        "relays",
+        "selection_consumer"
+      ],
+      "browser_video_plugin": [
+        "browser_host",
+        "browser_video_contracts",
+        "contracts",
+        "relays"
+      ],
+      "cli": [
+        "browser_comments_contracts",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_contracts",
+        "browser_public_search_plugin",
+        "browser_video_contracts",
+        "browser_video_open_contracts",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "contracts",
+        "fixtures",
+        "kernel",
+        "plugins",
+        "selection_consumer"
+      ],
+      "contracts": [],
+      "fixtures": [
+        "contracts"
+      ],
+      "kernel": [
+        "browser_contracts",
+        "browser_public_search_contracts",
+        "browser_video_contracts",
+        "browser_video_open_contracts",
+        "contracts",
+        "relays"
+      ],
+      "metadata_pipeline": [
+        "contracts",
+        "fixtures",
+        "relays"
+      ],
+      "plugins": [
+        "contracts",
+        "fixtures",
+        "metadata_pipeline"
+      ],
+      "relays": [
+        "contracts"
+      ],
+      "selection_consumer": [
+        "contracts"
+      ]
+    },
+    "max_dependencies": 15,
+    "top_fanout": [
+      [
+        "cli",
+        15
+      ],
+      [
+        "kernel",
+        6
+      ],
+      [
+        "browser_video_open_plugin",
+        5
+      ],
+      [
+        "browser_comments_plugin",
+        4
+      ],
+      [
+        "browser_host",
+        4
+      ],
+      [
+        "browser_public_search_plugin",
+        4
+      ],
+      [
+        "browser_video_plugin",
+        4
+      ],
+      [
+        "browser_comments_contracts",
+        3
+      ]
+    ],
+    "top_fanin": [
+      [
+        "contracts",
+        12
+      ],
+      [
+        "browser_contracts",
+        7
+      ],
+      [
+        "browser_video_contracts",
+        7
+      ],
+      [
+        "relays",
+        7
+      ],
+      [
+        "browser_host",
+        6
+      ],
+      [
+        "browser_public_search_contracts",
+        4
+      ],
+      [
+        "browser_comments_contracts",
+        3
+      ],
+      [
+        "browser_video_open_contracts",
+        3
+      ]
+    ],
+    "caveat": "Static local imports only; runtime injection, reflection and calls are not captured.",
+    "within_budget": true
+  },
+  "runtime_coupling": {
+    "retained_ports": [
+      {
+        "module": "browser_comments_plugin",
+        "class_name": "BrowserCommentsReadPlugin",
+        "parameter": "host",
+        "attribute": "host",
+        "used_methods": [
+          "read_comments"
+        ],
+        "broad_kernel": false
+      },
+      {
+        "module": "browser_plugin",
+        "class_name": "BrowserReadPlugin",
+        "parameter": "host",
+        "attribute": "host",
+        "used_methods": [
+          "read"
+        ],
+        "broad_kernel": false
+      },
+      {
+        "module": "browser_public_search_plugin",
+        "class_name": "BrowserPublicSearchPlugin",
+        "parameter": "host",
+        "attribute": "host",
+        "used_methods": [
+          "public_search"
+        ],
+        "broad_kernel": false
+      },
+      {
+        "module": "browser_video_open_plugin",
+        "class_name": "BrowserVideoOpenPlugin",
+        "parameter": "host",
+        "attribute": "host",
+        "used_methods": [
+          "open_video"
+        ],
+        "broad_kernel": false
+      },
+      {
+        "module": "browser_video_open_plugin",
+        "class_name": "BrowserVideoOpenPlugin",
+        "parameter": "selection_consumer",
+        "attribute": "selection_consumer",
+        "used_methods": [
+          "consume_browser_selection"
+        ],
+        "broad_kernel": false
+      },
+      {
+        "module": "browser_video_plugin",
+        "class_name": "BrowserVideoReadPlugin",
+        "parameter": "host",
+        "attribute": "host",
+        "used_methods": [
+          "read_video"
+        ],
+        "broad_kernel": false
+      }
+    ],
+    "wide_kernel_injections": 0,
+    "caveat": "Syntactic constructor retention/method calls only; aliases, dynamic access and hidden state are not proven absent.",
+    "callback_bindings": [
+      {
+        "consumer_module": "selection_consumer",
+        "provider_module": "kernel",
+        "method": "consume_browser_selection",
+        "wiring_module": "cli",
+        "kind": "reviewed_semantic_dependency_not_sandbox"
+      }
+    ],
+    "expected_wiring_present": true,
+    "within_budget": true
+  },
+  "revalidation": {
+    "candidate_implementation_frontiers": {
+      "__init__": [
+        "__init__"
+      ],
+      "__main__": [
+        "__main__"
+      ],
+      "auth_broker": [
+        "auth_broker"
+      ],
+      "auth_contracts": [
+        "auth_broker",
+        "auth_contracts"
+      ],
+      "browser_comment_fields": [
+        "__main__",
+        "browser_comment_fields",
+        "browser_comments_contracts",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli"
+      ],
+      "browser_comments_contracts": [
+        "__main__",
+        "browser_comments_contracts",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli"
+      ],
+      "browser_comments_plugin": [
+        "__main__",
+        "browser_comments_plugin",
+        "cli"
+      ],
+      "browser_contracts": [
+        "__main__",
+        "browser_comment_fields",
+        "browser_comments_contracts",
+        "browser_comments_plugin",
+        "browser_contracts",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_contracts",
+        "browser_public_search_plugin",
+        "browser_video_contracts",
+        "browser_video_open_contracts",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli",
+        "kernel",
+        "selection_consumer"
+      ],
+      "browser_host": [
+        "__main__",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli"
+      ],
+      "browser_plugin": [
+        "__main__",
+        "browser_plugin",
+        "cli"
+      ],
+      "browser_public_search_contracts": [
+        "__main__",
+        "browser_public_search_contracts",
+        "browser_public_search_plugin",
+        "browser_video_open_contracts",
+        "browser_video_open_plugin",
+        "cli",
+        "kernel",
+        "selection_consumer"
+      ],
+      "browser_public_search_plugin": [
+        "__main__",
+        "browser_public_search_plugin",
+        "cli"
+      ],
+      "browser_registry": [
+        "__main__",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_registry",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli"
+      ],
+      "browser_video_contracts": [
+        "__main__",
+        "browser_comments_contracts",
+        "browser_comments_plugin",
+        "browser_host",
+        "browser_plugin",
+        "browser_public_search_contracts",
+        "browser_public_search_plugin",
+        "browser_video_contracts",
+        "browser_video_open_contracts",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli",
+        "kernel",
+        "selection_consumer"
+      ],
+      "browser_video_open_contracts": [
+        "__main__",
+        "browser_video_open_contracts",
+        "browser_video_open_plugin",
+        "cli",
+        "kernel",
+        "selection_consumer"
+      ],
+      "browser_video_open_plugin": [
+        "__main__",
+        "browser_video_open_plugin",
+        "cli"
+      ],
+      "browser_video_plugin": [
+        "__main__",
+        "browser_video_plugin",
+        "cli"
+      ],
+      "cli": [
+        "__main__",
+        "cli"
+      ],
+      "contracts": [
+        "__main__",
+        "browser_comments_plugin",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli",
+        "contracts",
+        "fixtures",
+        "kernel",
+        "metadata_pipeline",
+        "plugins",
+        "relays",
+        "selection_consumer"
+      ],
+      "fixtures": [
+        "__main__",
+        "cli",
+        "fixtures",
+        "metadata_pipeline",
+        "plugins"
+      ],
+      "kernel": [
+        "__main__",
+        "browser_video_open_plugin",
+        "cli",
+        "kernel",
+        "selection_consumer"
+      ],
+      "metadata_pipeline": [
+        "__main__",
+        "cli",
+        "metadata_pipeline",
+        "plugins"
+      ],
+      "plugins": [
+        "__main__",
+        "cli",
+        "plugins"
+      ],
+      "relays": [
+        "__main__",
+        "browser_comments_plugin",
+        "browser_plugin",
+        "browser_public_search_plugin",
+        "browser_video_open_plugin",
+        "browser_video_plugin",
+        "cli",
+        "kernel",
+        "metadata_pipeline",
+        "plugins",
+        "relays",
+        "selection_consumer"
+      ],
+      "selection_consumer": [
+        "__main__",
+        "browser_video_open_plugin",
+        "cli",
+        "selection_consumer"
+      ]
+    },
+    "max_candidate_frontier": 16,
+    "caveat": "Imports plus detected kernel injection only; not certified proof dependency sets. Missing semantic edges require review. Contract-preserving equivalence is not assumed."
+  },
+  "source_sha256": {
+    "formal/browser_public_search_model.py": "1b8951d1a7f867436969ad27bd87a3d2e61df833a30b50fbc28ff011251ae08e",
+    "formal/browser_relay_model.py": "2d06231fca05380d2691b84878d041512eb9f994a7a9dc763c9a3351b94b6f66",
+    "formal/browser_video_open_model.py": "97cc9ef74d1829356230dbbed0df693774f889b57f996579c727e4a01520be69",
+    "formal/model.py": "9ad677291ca5e6901fa09651980e962483eb341137788c399bca4094813c5ba4",
+    "formal/relay_model.py": "cb81d49f776aaed2d21559075cda13d1555d3d7fa74df166a78decf195726151"
+  }
+}

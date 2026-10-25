@@ -21,6 +21,7 @@ from .browser_video_contracts import OPERATION as VIDEO_OPERATION
 from .contracts import Request, Result
 from .fixtures import FIXTURE_BVID, UNSUPPORTED, evidence
 from .kernel import Kernel
+from .selection_consumer import JournalSelectionConsumer
 from .plugins import FixtureVideoPlugin, PublicVideoPlugin
 
 MAX_LINE_CHARS = 65536
@@ -175,7 +176,7 @@ def main(argv=None):
                 is_comments = args.command == "browser-comments-read"
                 is_video = args.command == "browser-video-read"
                 is_public = args.command == "browser-public-search"
-                kernel.register(BrowserVideoOpenPlugin(host, kernel) if is_open else BrowserCommentsReadPlugin(host) if is_comments else BrowserPublicSearchPlugin(host) if is_public else BrowserVideoReadPlugin(host) if is_video else BrowserReadPlugin(host))
+                kernel.register(BrowserVideoOpenPlugin(host, JournalSelectionConsumer(kernel.consume_browser_selection)) if is_open else BrowserCommentsReadPlugin(host) if is_comments else BrowserPublicSearchPlugin(host) if is_public else BrowserVideoReadPlugin(host) if is_video else BrowserReadPlugin(host))
                 payload = {"source_operation_id": args.source_operation_id} if is_open else {"source_url": public_source_url(args.source_url), "source_tab_id": args.tab} if is_public else {"expected_url": args.url, "expected_tab_id": args.tab}
                 if is_comments:
                     payload["limit"] = args.limit
