@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dot-bilibili",
-  "version": "0.1.0",
-  "description": "Read public Bilibili search results and visible video metadata through an existing authorized dot browser host. Requires a separately configured local runtime."
+  "version": "0.2.1",
+  "description": "Read public Bilibili search results or a supplied BVID/canonical video link through an existing authorized dot browser host. Requires the configured canonical local runtime."
 }

@@ -1,0 +1,58 @@
+{
+  "account_writes": false,
+  "alias_replay": {
+    "counts_delta": {
+      "browser_selections": 0,
+      "operations": 0,
+      "reservations": 0
+    },
+    "original_profile_unchanged": true,
+    "parsed_json_equal": true,
+    "same_invocation_id": true,
+    "same_request_id": true,
+    "serialized_bytes_equal": true,
+    "spool_bytes_and_mtimes_unchanged": true
+  },
+  "broadened_query": false,
+  "canonical_runtime_continuity": true,
+  "capture_invocation_note": "One function-expression string evaluation returned undefined before the fixed capture was invoked as a function; no receipt was derived from it.",
+  "capture_recipe_sha256": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+  "case": "installed_skill_given_video_reference_fail_closed",
+  "comments_requested": false,
+  "date": "2026-10-25",
+  "direct_video_navigation": false,
+  "existing_ledger_and_spool": true,
+  "incidental_playback_pause": false,
+  "installed_skill_read": true,
+  "metadata_acceptance": false,
+  "native_tool_registration": false,
+  "new_browser_primitive": false,
+  "new_invocation_retry": false,
+  "original": {
+    "accepted_blocked_receipt_count": 1,
+    "browser_navigation_count": 1,
+    "complete": false,
+    "data_present": false,
+    "error": "dom_unavailable",
+    "next_action": "contact_host",
+    "operation_count_delta": {
+      "browser_selections": 0,
+      "operations": 1,
+      "reservations": 1
+    },
+    "scope": "none",
+    "status": "failed"
+  },
+  "schema_version": 1,
+  "status_check": {
+    "counts_delta": {
+      "browser_selections": 0,
+      "operations": 0,
+      "reservations": 0
+    },
+    "parsed_json_equal": true,
+    "serialized_bytes_equal": true,
+    "spool_bytes_and_mtimes_unchanged": true
+  },
+  "stop_reason": "unchanged_fixed_capture_recipe_raised_dom_unavailable"
+}

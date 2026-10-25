@@ -1,8 +1,11 @@
 """Offline public upload packaging checks; not installation acceptance."""
 import importlib.util
 import json
+import re
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 import tempfile
 import unittest
 import zipfile
@@ -33,6 +36,44 @@ class PluginBundleTests(unittest.TestCase):
             manifest = json.loads(archive.read('plugin.json'))
             self.assertEqual(manifest['name'], 'dot-bilibili')
             self.assertNotIn('mcpServers', manifest)
+
+    def test_public_read_examples_match_runtime_contracts(self):
+        from facade.contracts import validate as validate_search
+        from bili_video_reference.contracts import validate as validate_video
+        skill = (self.source / 'skills/bilibili/SKILL.md').read_text()
+        examples = [json.loads(raw) for raw in re.findall(r'```json\n(.*?)\n```', skill, re.S)]
+        read_examples = [item for item in examples if item['tool'] != 'bili_status']
+        self.assertEqual({item['tool'] for item in read_examples},
+                         {'bili_search_read', 'bili_read_video'})
+        for item in read_examples:
+            validator = validate_video if item['tool'] == 'bili_read_video' else validate_search
+            normalized = validator(item['arguments'])
+            self.assertFalse(normalized['comments'])
+            if item['tool'] == 'bili_read_video':
+                self.assertEqual(normalized['query'], normalized['select'])
+
+    def test_documented_bootstrap_commands_have_complete_resources(self):
+        for action in ('diagnose', 'instructions'):
+            result = json.loads(subprocess.check_output(
+                [sys.executable, '-m', 'bili_distribution.cli', action], cwd=ROOT))
+            self.assertTrue(result['resource_closure']['ok'])
+            if action == 'instructions':
+                self.assertEqual(result['recipe_version'], 'host-capture-v1')
+                self.assertEqual(Path(result['resources']['capture_recipe']).name,
+                                 'host_capture_recipes.js')
+                self.assertTrue(Path(result['resources']['projection_recipe']).is_file())
+        for module in ('bili_integration.cli', 'bili_video_reference.cli'):
+            schemas = json.loads(subprocess.check_output(
+                [sys.executable, '-m', module, 'schemas'], cwd=ROOT))
+            self.assertTrue(schemas)
+        instructions = json.loads(subprocess.check_output(
+            [sys.executable, '-m', 'bili_video_reference.cli', 'instructions'], cwd=ROOT))
+        self.assertEqual(instructions['recipe_version'], 'host-capture-v2')
+        self.assertEqual(len(instructions['components']), 3)
+
+    def test_skill_never_routes_to_incomplete_legacy_instructions(self):
+        skill = (self.source / 'skills/bilibili/SKILL.md').read_text()
+        self.assertNotIn('bili_integration.cli instructions', skill)
 
     def test_extra_private_file_fails_closed(self):
         (self.source / 'private.sqlite3').write_bytes(b'private')

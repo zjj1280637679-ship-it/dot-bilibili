@@ -1,14 +1,15 @@
 ---
 name: bilibili
-description: Search public Bilibili (哔哩哔哩/B站), read visible video metadata and optionally current-viewport comments, or check a recorded request through the configured dot browser host. Not video/audio understanding or account actions.
+description: Search public Bilibili (哔哩哔哩/B站), read visible metadata for a supplied BVID or canonical video link and optionally current-viewport comments, or check a recorded request through the configured dot browser host. Not video/audio understanding or account actions.
 ---
 
 # Bilibili through the existing dot host
 
 This plugin provides instructions, not new native tools or browser access. Use
 existing shell and supported native CUA tools with the separately configured
-`bili_integration` runtime. Do not claim `bili_search_read` or `bili_status` is a
-registered chat tool: these are JSON dispatch names accepted by the host CLI.
+`bili_integration` runtime and its additive `bili_video_reference` source module.
+`bili_search_read`, `bili_status`, and `bili_read_video` are JSON dispatch names,
+not registered native chat tools or MCP tools.
 
 ## Resolve the host once per session
 
@@ -22,7 +23,9 @@ registered chat tool: these are JSON dispatch names accepted by the host CLI.
    or spool automatically. Missing runtime/shell/CUA access is a concrete setup
    blocker; ask the host operator to configure it, not reveal credentials.
 2. Use `runtime_root` as the working directory for all runtime commands. Run
-   `python -m bili_integration.cli diagnose`, then `instructions` and `schemas`.
+   `python -m bili_distribution.cli diagnose`, then
+   `python -m bili_distribution.cli instructions` for the complete resource
+   closure, and `python -m bili_integration.cli schemas`.
    Read the host runbook and relevant fixed capture/projection resources from
    the paths returned by `instructions`. Check files actually exist before use.
    Do not assume plugin-uploaded resources were materialized on disk. Diagnosis
@@ -33,18 +36,35 @@ registered chat tool: these are JSON dispatch names accepted by the host CLI.
 
 ## Business request
 
+- When the user supplies a BVID or canonical video URL to read, use
+  `bili_read_video` with `video` and optional `comments`. Accept only a literal
+  `BV` followed by 10 ASCII letters/digits, or
+  `https://www.bilibili.com/video/` followed by that BVID and an optional trailing
+  slash. No short links, redirects, query/fragment, userinfo, alternate origins,
+  percent decoding or silent URL cleanup. Ask for a supported reference when
+  needed; do not navigate a rejected URL as a fallback.
+- This given-video route searches with `query=BVID`, then selects that exact
+  BVID from fresh visible results. It is NOT direct-link navigation and may
+  return `selection_not_found` even for an existing video. Do not substitute the
+  first result or broaden the search. It uses four operations, or five with
+  comments, with the same existing evidence and budget boundaries.
 - Search/read requires `query` (1–200 characters) and `select`: either an exact
   BVID or explicitly authorized `first_visible`. Ask when the user's intended
   selection is unclear; do not silently pick the first result. An exact BVID
   must still occur in the fresh visible search results.
 - Set `comments=true` only when requested. Default false. This reads at most
-  three current-viewport top-level threads, not all comments or replies.
+  three current-viewport top-level threads, not all comments or replies. No
+  automatic scrolling; an empty current viewport is not proof of no comments.
 - Status accepts only an already returned `request_id`. It reads the ledger and
   never starts, resumes or retries browser work.
 - Use the schemas from the installed runtime; business JSON must not contain
   paths, scripts, selectors, account IDs or caller-selected executors.
 
 Example business envelopes (examples are not executable tool declarations):
+
+```json
+{"tool":"bili_read_video","arguments":{"video":"BV1234567890","comments":false}}
+```
 
 ```json
 {"tool":"bili_search_read","arguments":{"query":"用户给定关键词","select":"first_visible","comments":false}}
@@ -56,7 +76,7 @@ Example business envelopes (examples are not executable tool declarations):
 
 ## Execute with the real host
 
-For a new search/read, establish the user-authorized browser context using
+For a new search/read or given-video read, establish the user-authorized browser context using
 available supported native CUA, and freshly observe its exact tab and source
 URL. A stored URL/tab is not authority. Navigation can affect history/autoplay;
 this workflow does not watch or understand the media. Stop at login, CAPTCHA,
@@ -68,7 +88,41 @@ print its contents into user output. Durably save a unique host invocation ID
 and the exact business intent before calling. Reuse that ID and intent for the
 same invocation; do not mint a new ID to bypass uncertainty or budgets.
 
-Pass the business envelope on JSON stdin, not interpolated shell text:
+Pass the business envelope on JSON stdin, not interpolated shell text. Route
+`bili_read_video` through the additive source CLI in the same canonical root:
+
+```text
+python -m bili_video_reference.cli schemas
+python -m bili_video_reference.cli instructions
+python -m bili_video_reference.cli call --profile <private-profile> --invocation-id <durable-host-id>
+```
+
+Check that this module is available before making the call. It is not included
+in the historical frozen wheel; do not change runtime roots or install a wheel
+to resolve a missing module. Report a host runtime update requirement instead.
+For this given-video route only, read its own `instructions` output and returned
+capture runbook before starting the call. Require `recipe_version=host-capture-v2`
+and the fixed composer, three component paths/pinned hashes, and composed-function
+hash. Use the returned deterministic composer locally: it accepts no caller
+parameters or source paths, verifies the pinned component bytes, and emits one
+read-only capture function. Verify the UTF-8 function against
+`composed_function_sha256`; the composer's one printed terminal newline is not
+part of that hash. Do not hand-write/reconstruct browser code, change selectors,
+substitute paths/components, or fall back to a different recipe after failure.
+Missing files/module, recipe mismatch, or hash mismatch is a host setup blocker;
+stop before browser work and report it without resetting or replaying the request.
+
+Use this exact composed function for this route's supported read-only DOM
+capture, passing only the documented `kind` and bounded `limit`. Do not install
+page globals or script tags. Existing native-CUA preflight, navigation checkpoints,
+receipt validation, budgets and private audit evidence still apply. A layout
+failure from an older invocation remains that failure, not retroactively fixed.
+The v2 capture choice is scoped to `bili_read_video`; do not select it for legacy
+search, arbitrary layouts, or a new business schema. Legacy `bili_search_read`
+continues using `bili_distribution.cli instructions` and its original v1 recipe.
+
+Use the original CLI for `bili_search_read` and `bili_status` (including status
+for a request originally created by `bili_read_video`):
 
 ```text
 python -m bili_integration.cli call --profile <private-profile> --invocation-id <durable-host-id>

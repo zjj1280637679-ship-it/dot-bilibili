@@ -1,0 +1,228 @@
+{
+  "installed_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+  "origin_checked": true,
+  "fail_closed_no_host": true,
+  "same_id_no_replay": true,
+  "status_read_only": true,
+  "relocation_conflict_preserved": true,
+  "installed_resource_closure": {
+    "ok": true,
+    "resource_count": 24,
+    "edges": [
+      {
+        "source": "README.md",
+        "target": "CONTRIBUTING.md"
+      },
+      {
+        "source": "README.md",
+        "target": "SECURITY.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/ai-tool-usage.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/browser-comments.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/browser-host-contract.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/browser-public-search.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/browser-video-open.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/delivery-boundaries.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/host-capture-recipes.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/milestone-five-acceptance.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/product-directions.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/progress.json"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/read-workflow.md"
+      },
+      {
+        "source": "README.md",
+        "target": "docs/verification-budget.md"
+      },
+      {
+        "source": "docs/ai-tool-usage.md",
+        "target": "README.md"
+      },
+      {
+        "source": "docs/ai-tool-usage.md",
+        "target": "docs/ai-tool-facade.md"
+      },
+      {
+        "source": "docs/ai-tool-usage.md",
+        "target": "docs/milestone-five-acceptance.md"
+      },
+      {
+        "source": "docs/browser-host-contract.md",
+        "target": "docs/browser-comments.md"
+      },
+      {
+        "source": "docs/browser-host-contract.md",
+        "target": "docs/browser-public-search.md"
+      },
+      {
+        "source": "docs/browser-host-contract.md",
+        "target": "docs/browser-usage.md"
+      },
+      {
+        "source": "docs/browser-host-contract.md",
+        "target": "docs/browser-video-open.md"
+      },
+      {
+        "source": "docs/browser-public-search.md",
+        "target": "docs/verification.md"
+      },
+      {
+        "source": "docs/browser-usage.md",
+        "target": "docs/browser-comments.md"
+      },
+      {
+        "source": "docs/browser-usage.md",
+        "target": "docs/browser-host-contract.md"
+      },
+      {
+        "source": "docs/browser-usage.md",
+        "target": "docs/browser-public-search.md"
+      },
+      {
+        "source": "docs/browser-usage.md",
+        "target": "docs/browser-video-open.md"
+      },
+      {
+        "source": "docs/browser-usage.md",
+        "target": "docs/verification.md"
+      },
+      {
+        "source": "docs/browser-video-open.md",
+        "target": "docs/verification.md"
+      },
+      {
+        "source": "docs/host-capture-recipes-v2.md",
+        "target": "docs/browser-host-contract.md"
+      },
+      {
+        "source": "docs/host-capture-recipes-v2.md",
+        "target": "docs/host-capture-recipes.md"
+      },
+      {
+        "source": "docs/installable-integration.md",
+        "target": "docs/read-workflow.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/host-capture-recipes-v2.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/installable-integration.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/prerequisites.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/read-workflow.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/video-reference-relationship.md"
+      },
+      {
+        "source": "docs/installable-integration-v032.md",
+        "target": "docs/video-reference-v1.md"
+      },
+      {
+        "source": "docs/milestone-five-acceptance.md",
+        "target": "docs/ai-tool-usage.md"
+      },
+      {
+        "source": "docs/product-directions.md",
+        "target": "README.md"
+      },
+      {
+        "source": "docs/product-directions.md",
+        "target": "docs/ai-tool-usage.md"
+      },
+      {
+        "source": "docs/product-directions.md",
+        "target": "docs/milestone-five-acceptance.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/browser-comments.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/browser-host-contract.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/browser-public-search.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/browser-usage.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/browser-video-open.md"
+      },
+      {
+        "source": "docs/read-workflow.md",
+        "target": "docs/milestone-five-acceptance.md"
+      },
+      {
+        "source": "docs/verification.md",
+        "target": "docs/milestone-five-acceptance.md"
+      },
+      {
+        "source": "docs/video-reference-v1.md",
+        "target": "docs/host-capture-recipes-v2.md"
+      },
+      {
+        "source": "docs/video-reference-v1.md",
+        "target": "docs/video-reference-relationship.md"
+      }
+    ],
+    "scope": "allowlisted files and relative Markdown/protocol edges; not anchor or implementation proof"
+  },
+  "v2_composition_checked": true,
+  "explicit_v1_v2_route_separation_checked": true,
+  "separate_schema_routes_checked": true,
+  "exact_documented_module_bootstrap_checked": true,
+  "wheel_file_allowlist_checked": true,
+  "ok": true,
+  "runtime_allowlist_count": 48,
+  "wheel_sha256": "f34c91bbbb608a6f550ea1999daed8d61705aa24313a03b2d6bdf159867f4860",
+  "scope": "Offline isolated installation/resource relation checks only; no browser run, host registration or ledger migration.",
+  "full_suite_snapshot": {
+    "tests": 360,
+    "passed": true
+  }
+}
