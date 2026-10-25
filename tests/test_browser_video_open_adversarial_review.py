@@ -8,6 +8,7 @@ from bili_bridge.browser_registry import NAVIGATION_CONTRACTS
 from bili_bridge.browser_video_open_plugin import BrowserVideoOpenPlugin
 from bili_bridge.contracts import Request, Result
 from bili_bridge.kernel import Kernel
+from bili_bridge.selection_consumer import JournalSelectionConsumer
 
 BVID = 'BV1234567890'
 URL = 'https://www.bilibili.com/video/' + BVID + '/'
@@ -101,7 +102,7 @@ class VideoOpenIndependentReviewTests(unittest.TestCase):
                 source, host = Source(), NeverHost()
                 source.data = data
                 try:
-                    kernel.register(source); kernel.register(BrowserVideoOpenPlugin(host, kernel))
+                    kernel.register(source); kernel.register(BrowserVideoOpenPlugin(host, JournalSelectionConsumer(kernel.consume_browser_selection)))
                     kernel.dispatch(Request('source', BINDING, 'browser.search_results.read', 'test', {}))
                     result = kernel.dispatch(Request('open', BINDING, c.OPERATION, BVID,
                                                      {'source_operation_id': 'source'}))
@@ -133,7 +134,7 @@ class VideoOpenIndependentReviewTests(unittest.TestCase):
                 path = Path(directory)/'journal.db'
                 host = Host(error)
                 kernel = Kernel(path, min_interval=0, hourly_budget=100, clock=lambda: 100)
-                kernel.register(Source()); kernel.register(BrowserVideoOpenPlugin(host, kernel))
+                kernel.register(Source()); kernel.register(BrowserVideoOpenPlugin(host, JournalSelectionConsumer(kernel.consume_browser_selection)))
                 source = Request('source', BINDING, 'browser.search_results.read', 'test', {})
                 self.assertEqual(kernel.dispatch(source).status, 'applied')
                 opening = Request('open', BINDING, c.OPERATION, BVID, {'source_operation_id': 'source'})
@@ -144,7 +145,7 @@ class VideoOpenIndependentReviewTests(unittest.TestCase):
                 kernel.close()
                 kernel = Kernel(path, min_interval=0, hourly_budget=100, clock=lambda: 100)
                 try:
-                    kernel.register(BrowserVideoOpenPlugin(host, kernel))
+                    kernel.register(BrowserVideoOpenPlugin(host, JournalSelectionConsumer(kernel.consume_browser_selection)))
                     again = kernel.dispatch(Request('open-again', BINDING, c.OPERATION, BVID,
                                                     {'source_operation_id': 'source'}))
                     self.assertEqual(again.error, 'selection_already_consumed')

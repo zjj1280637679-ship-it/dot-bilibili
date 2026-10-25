@@ -17,6 +17,7 @@ from bili_bridge.browser_video_plugin import BrowserVideoReadPlugin
 from bili_bridge.browser_registry import make_request, validate_request, validate_receipt
 from bili_bridge.contracts import Request
 from bili_bridge.kernel import Kernel
+from bili_bridge.selection_consumer import JournalSelectionConsumer
 from bili_bridge.cli import main, manifest
 from test_browser_public_search import preflight as search_preflight, receipt as search_receipt
 from test_browser_video import receipt as video_receipt
@@ -76,7 +77,7 @@ class OpenRoundtrip(unittest.TestCase):
         self.kernel=Kernel(self.root/'journal.db',min_interval=0,hourly_budget=100)
         self.host=FileBrowserHost(self.root/'spool',timeout=.5,cooldown=1)
         self.kernel.register(BrowserPublicSearchPlugin(self.host))
-        self.kernel.register(BrowserVideoOpenPlugin(self.host,self.kernel))
+        self.kernel.register(BrowserVideoOpenPlugin(self.host,JournalSelectionConsumer(self.kernel.consume_browser_selection)))
         self.kernel.register(BrowserVideoReadPlugin(self.host))
     def tearDown(self):
         self.host.close();self.kernel.close();self.tmp.cleanup()

@@ -1,0 +1,34 @@
+{
+  "version": "0.3.0",
+  "as_of_utc": "2026-10-25T07:16:28.066749+00:00",
+  "milestone": {
+    "id": "five-browser-primitives-v1",
+    "strict_accepted": 5,
+    "denominator": 5
+  },
+  "research_catalog": {
+    "scope": "proposed-v1",
+    "known_business_leaves": 122,
+    "recommended_core_leaves": 67,
+    "implemented_leaves": 5,
+    "strict_accepted_leaves": 5,
+    "remaining_not_implemented": 117,
+    "all_known_percent": 4.1,
+    "recommended_core_percent": 7.46
+  },
+  "api_entry": {
+    "tools": [
+      "bili_search_read",
+      "bili_status"
+    ],
+    "real_python_facade_workflow": "passed",
+    "native_chat_tool_registration": false
+  },
+  "evidence": "milestone-five-acceptance.json",
+  "limits": [
+    "Host-mediated source checkout; not unattended independent browser driver.",
+    "Current live comment tests cover accessible empty viewport, not positive full comment body/paging.",
+    "The initial research report is a dated baseline, not this current progress snapshot.",
+    "No account-write capability is enabled or authorized by this progress file."
+  ]
+}
