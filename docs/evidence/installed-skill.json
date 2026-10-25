@@ -1,0 +1,69 @@
+{
+  "acceptance": "installed_skill_host_mediated_live_metadata_read",
+  "date_utc": "2026-10-25",
+  "installed_skill": {
+    "name": "dot-bilibili:bilibili",
+    "skill_version": "not_declared",
+    "runtime_distribution_version": "0.3.1",
+    "runtime_execution": "canonical existing checkout host integration, not installed-wheel execution",
+    "runtime_distribution_version_scope": "additive integration package metadata; historical checkout bridge version remains 0.3.0"
+  },
+  "runtime_workflow_source_digest": "042493f2be5f46bb38bd2de7b48021b75e5c6b92b1b8dd789fd8179d438de969",
+  "integration_manifest_sha256": "70b207736cdd7b84e1ba83b3d4d3d859895f7db6b9e9489f32feb671219b663c",
+  "capture_recipe_sha256": "1cdaa1666863524647f1fd8dcc5a3e88010429820067752c6bac331a8b14b64a",
+  "sequence": [
+    {
+      "operation": "browser.public_search",
+      "status": "applied"
+    },
+    {
+      "operation": "browser.search_results.read",
+      "status": "applied"
+    },
+    {
+      "operation": "browser.video.open",
+      "status": "applied"
+    },
+    {
+      "operation": "browser.video_page.read",
+      "status": "applied"
+    }
+  ],
+  "status": "succeeded",
+  "complete": false,
+  "comments_requested": false,
+  "status_lookup": {
+    "status": "succeeded",
+    "reservation_delta": 0,
+    "operation_delta": 0,
+    "spool_unchanged": true,
+    "parsed_json_equal": true,
+    "serialized_bytes_equal": false,
+    "serialization_difference": "JSON object key order only"
+  },
+  "same_invocation_replay": {
+    "status": "succeeded",
+    "reservation_delta": 0,
+    "operation_delta": 0,
+    "spool_unchanged": true,
+    "parsed_json_equal": true,
+    "serialized_bytes_equal": false,
+    "serialization_difference": "JSON object key order only"
+  },
+  "evidence_sha256": {
+    "result.json": "a96068d0f6162d26bfe15cefd35348199190e16360674b9543d340a3334cfbb2",
+    "status.json": "2386ad918cdf0fd8cde97684ace1f499996aa2073080cdc16dc2239b596b6832",
+    "replay.json": "c7e34d1c7ac86c9992a85f2c5b9b079966162a0e9a617ecbc977b80dd22f7690",
+    "receipt1.json": "84fe8b318c945cda29708ac0d7e0f41abea90c52904f39406adcd6b42f75f862",
+    "receipt2.json": "bcb1e390a354bd7e8d4fb98506a3bc8a7c285bf23902495984bedda1874e05e6",
+    "receipt3.json": "7758024ce2099bd744370edafb2b305a56bd0974f368275ac5c4fc73d27033b3",
+    "receipt4.json": "dbf3320db934afdfaac2cdcb6d0d13efde0195a50bd2e7f2657960274a9d02eb"
+  },
+  "scope": {
+    "native_tool_registration": false,
+    "new_browser_or_login": false,
+    "account_writes": false,
+    "ancillary_action": "ordinary_ui_pause_of_incidental_autoplay"
+  },
+  "proof_correction": "Prior envelope_identical field compared raw serialization rather than parsed JSON; replaced with explicitly separate comparisons. Original evidence unchanged."
+}
