@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "bili-offline-fixture": {
+      "disabled": true,
+      "command": "/usr/bin/python3",
+      "args": [
+        "-m",
+        "minimal_slice_vnext.server",
+        "--db",
+        "/ABSOLUTE/PATH/TO/PROJECT/fixture-state.sqlite3",
+        "--fixture-ready"
+      ],
+      "cwd": "/ABSOLUTE/PATH/TO/PROJECT",
+      "enabledTools": [
+        "capabilities.list",
+        "video.reference.resolve",
+        "video.metadata.read",
+        "operation.status"
+      ]
+    }
+  }
+}

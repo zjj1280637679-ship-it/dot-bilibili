@@ -1,0 +1,45 @@
+{
+  "checked_utc_date": "2026-10-27",
+  "reference_type": "primary community implementation and its own tests; NOT Bilibili official schema",
+  "public_reference": {
+    "repository": "222wcnm/BiliStalkerMCP",
+    "commit": "952fd83b9089b3f1b5bfde730b968fe63e3eb6df",
+    "commit_time": "2026-10-10T13:03:35Z",
+    "source": {
+      "path": "bili_stalker_mcp/services/user_service.py",
+      "blob_sha": "68c7d50bec1dbb36b326f948e5d2e0d3ad9d2fd6",
+      "lines": "530–570",
+      "url": "https://github.com/222wcnm/BiliStalkerMCP/blob/952fd83b9089b3f1b5bfde730b968fe63e3eb6df/bili_stalker_mcp/services/user_service.py#L530-L570",
+      "facts": ["web view endpoint and bvid parameter", "code zero and object data", "bvid/title/aid/pubdate/duration field names"]
+    },
+    "tests": {
+      "path": "tests/test_video_detail_subtitles.py",
+      "blob_sha": "eddd92470607cc50095bc80f958753d7c96f7817",
+      "facts": ["synthetic raw envelope fixtures", "raw API errors retain numeric code", "missing metadata fields are possible in tests"]
+    },
+    "license": {
+      "path": "LICENSE",
+      "blob_sha": "a619b6ce7e336eac7ea03cb41818c11c799f6cdd",
+      "spdx": "MIT",
+      "copyright": "2025 222wcnm"
+    },
+    "reuse": "Schema facts only; no source, test fixture, retry, transport, signature or risk-code implementation copied or imported"
+  },
+  "sdk_status": {
+    "repository": "Nemo2011/bilibili-api",
+    "checked_main_commit": "3798d3b3bd3c3a93678d5a0367637a19262303ef",
+    "commit_time": "2026-07-06T13:49:41Z",
+    "root_files_observed": ["README.md"],
+    "finding": "README announces maintenance cessation/permanent shutdown; old video.py/video.json/network.py paths returned 404; this commit had no parents",
+    "pypi_version": "17.4.2",
+    "pypi_url": "https://pypi.org/project/bilibili-api-python/17.4.2/",
+    "pypi_license": "GPL-3.0-or-later",
+    "downloaded_installed_or_vendored": false
+  },
+  "first_party_basis": {
+    "source": "public-reference/bili_bridge/fixtures.py",
+    "facts": ["strict requested/returned BVID binding", "allowlisted metadata projection", "explicit synthetic provenance"],
+    "license": "MIT; existing project LICENSE retained"
+  },
+  "limits": ["no Bilibili endpoint requested", "no claim of current endpoint authorization/availability", "no legal conclusion", "not a full dependency license audit", "community reference coercion/fallback/retry/risk mapping intentionally not adopted"]
+}

@@ -1,0 +1,32 @@
+test_invalid_argument_types_zero_calls (test_mcp_compat.Compatibility.test_invalid_argument_types_zero_calls) ... ok
+test_invalid_meta_types_zero_calls (test_mcp_compat.Compatibility.test_invalid_meta_types_zero_calls) ... ok
+test_meta_not_tool_arguments_or_authority (test_mcp_compat.Compatibility.test_meta_not_tool_arguments_or_authority) ... ok
+test_meta_with_omitted_arguments (test_mcp_compat.Compatibility.test_meta_with_omitted_arguments) ... ok
+test_missing_or_invalid_name_zero_calls (test_mcp_compat.Compatibility.test_missing_or_invalid_name_zero_calls) ... ok
+test_optional_arguments (test_mcp_compat.Compatibility.test_optional_arguments) ... ok
+test_unknown_param_zero_calls (test_mcp_compat.Compatibility.test_unknown_param_zero_calls) ... ok
+test_atomic_concurrent_claim (test_slice.SliceTests.test_atomic_concurrent_claim) ... ok
+test_backend_unwired_not_denied (test_slice.SliceTests.test_backend_unwired_not_denied) ... ok
+test_conflicting_semantics (test_slice.SliceTests.test_conflicting_semantics) ... ok
+test_crash_reservation_never_replays (test_slice.SliceTests.test_crash_reservation_never_replays) ... ok
+test_default_paused (test_slice.SliceTests.test_default_paused) ... ok
+test_error_no_secret_or_replay (test_slice.SliceTests.test_error_no_secret_or_replay) ... ok
+test_independent_fixture_metadata (test_slice.SliceTests.test_independent_fixture_metadata) ... ok
+test_input_surface_is_closed (test_slice.SliceTests.test_input_surface_is_closed) ... ok
+test_pause_persists_no_clear_on_startup (test_slice.SliceTests.test_pause_persists_no_clear_on_startup) ... ok
+test_protocol_lifecycle (test_slice.SliceTests.test_protocol_lifecycle) ... ok
+test_real_subprocess_stdio_and_restart_pause (test_slice.SliceTests.test_real_subprocess_stdio_and_restart_pause) ... ok
+test_same_id_no_replay (test_slice.SliceTests.test_same_id_no_replay) ... ok
+test_stale_wrong_target (test_slice.SliceTests.test_stale_wrong_target) ... ok
+test_status_zero_dispatch (test_slice.SliceTests.test_status_zero_dispatch) ... ok
+test_strict_json (test_slice.SliceTests.test_strict_json) ... ok
+test_strict_resolver (test_slice.SliceTests.test_strict_resolver) ... ok
+test_transport_success_is_not_business_success (test_slice.SliceTests.test_transport_success_is_not_business_success) ... ok
+test_typed_outcomes (test_slice.SliceTests.test_typed_outcomes) ... ok
+test_unknown_does_not_poison_other_operations (test_slice.SliceTests.test_unknown_does_not_poison_other_operations) ... ok
+test_unknown_fixture_not_invented (test_slice.SliceTests.test_unknown_fixture_not_invented) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.147s
+
+OK

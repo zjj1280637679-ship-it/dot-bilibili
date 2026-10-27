@@ -1,0 +1,15 @@
+{
+  "stage": "AG-host verified offline fixture only; no live Bilibili",
+  "version": "0.1.1-candidate",
+  "files": {
+    "README.md": "7912d23d5d4ecff293e3d2ee49ba1e42df93ac8f420e7182fa40e2c1f857c4d0",
+    "service.py": "5d4d384820094494bd67b90614510c9e480322fbf2e78c8bf6ad7d109f8d01fb",
+    "MCP_CONFIG.INERT.example.json": "a2ba615e196ed5ae0dbe4ee8d96725c6eda6fe0db32535f0087692dd8127fd50",
+    "server.py": "f9c52a490360bcadda2b1314d333eeaf4a409977ae45012f9a99ff8953c4a45f",
+    "LICENSE": "c7d0ff0a2634aa88047c14fbc139fe9c53bff07ca8d3c369f2bcc44290713e06",
+    "TEST_RESULTS.txt": "8d5747a70bb64fd5ea003c5c569a2403bec2b7e64ddcb9c6225c222481712335",
+    "__init__.py": "80e5bd628adf0e5fb3ef97bff19df10ff79d4b81bbe8d642b4b488782dd4b835",
+    "tests/test_mcp_compat.py": "ccf3b8d3380b065e05c917c248026c6f061609d00bc9d83d703709b11362238b",
+    "tests/test_slice.py": "080ce89f551830a101605dd225b0cb502232dbc8398ae55d3dfb9ebd5942d75c"
+  }
+}
