@@ -6,6 +6,7 @@ commands=[
  (ROOT,['-m','unittest','discover','-s','minimal_slice_vnext/tests','-v']),
  (ROOT/'metadata-adapter-candidate',['-m','unittest','discover','-s','tests','-v']),
  (ROOT,['-m','unittest','discover','-s','next_phase','-t','.','-p','test*.py','-v']),
+ (ROOT/'credential-store-candidate',['-m','unittest','discover','-s','tests','-v']),
 ]
 commands += [(ROOT,[str(p.relative_to(ROOT)),'-v']) for p in sorted((ROOT/'tests/independent').glob('test_*.py'))]
 env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1')

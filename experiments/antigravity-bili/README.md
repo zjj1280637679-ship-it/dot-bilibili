@@ -11,6 +11,7 @@
 | 原仓库 dot / 浏览器适配 | 原有代码保持不变；本目录不重新验收它 | 旧入口的能力数不是完整插件完成率 |
 | `minimal_slice_vnext` | 4 个独立 fixture MCP 工具；真实 Antigravity CLI 宿主已发现并调用；重启保留 pause；最终 clean build 又验证了缓存 status | 不是真实 Bilibili 元数据、账号授权或通用部署 |
 | `next_phase` | 国内 QR 响应解析、合成 marker 存储、账号 pause、身份票据/read lease、typed metadata；实际三模块离线组合已测试 | 假 cookie/opaque marker 不是可用凭据；未新增公开 MCP 登录工具 |
+| `credential-store-candidate` | 独立 POSIX 明文文件端口；合成材料的跨进程恢复、完整 handle CAS、原子替换与权限边界通过 35 + 18 项测试 | 尚未接入 QR/session/metadata，也未保存或使用真实凭据；不是加密或永久云磁盘保证 |
 | 真实 Bilibili | 此候选没有实时验收 | 未证明真实扫码/手机登录、当前 NAV/metadata、写操作或恢复成功 |
 
 这些证据层不能互相替代：源码入库不等于部署，mock 测试不等于实网验收。新的可逆写功能必须另外留下“实际动作 + 恢复原状态”的证据，不能只验证回包或模拟回滚。
@@ -45,9 +46,15 @@ python -B -m minimal_slice_vnext.server --db ./fixture-state.sqlite3
 
 见 [TESTING.md](TESTING.md)。测试使用合成响应、fake opener 和临时 SQLite，包含实际本地 stdio 子进程及预留后进程退出测试，未访问任何 Bilibili 账号或网络。
 
-`NarrowViewHttpTransport` **含有真实 urllib 分支**，默认 network disabled 且 paused；测试仅注入 fake opener。通过测试不授权开启该分支。安全的生产凭据后端、跨进程账号级 pending-login owner、真实身份验证、写授权与恢复、完整能力目录、对新模块的宿主安装验收仍待实现/验证。手机/SMS 未实现不等于永久禁止。
+`NarrowViewHttpTransport` **含有真实 urllib 分支**，默认 network disabled 且 paused；测试仅注入 fake opener。通过测试不授权开启该分支。独立文件存储候选到生产凭据后端的接入/真实验收、跨进程账号级 pending-login owner、真实身份验证、写授权与恢复、完整能力目录、对新模块的宿主安装验收仍待实现/验证。手机/SMS 未实现不等于永久禁止。
 
 未知/暂停/未实现不等同用户拒绝；纯解析不授予权限。可信 Python ports 不是可让模型传 `approved=true` 就放行的公开工具。当前 metadata 记录的 `recorded` 仅代表保存观察，不代表实时动作完成。
+
+## 新增独立存储端口
+
+`credential-store-candidate` 接收可信内部 opaque bytes，公开结果只返回账号/handle/generation 与状态；恢复始终 `unverified`，callback entry 不是业务成功或授权。CAS、非阻塞协作锁与 fsync/replace 用于隔离验证存储关系，不改变现有 marker-only 组合。
+
+本轮只用临时 `FAKE_ONLY` 材料，未读取、保存、备份任何真实凭据。受限明文文件不等于加密、同 UID 恶意代码隔离或不可回滚存储。跨进程与同文件系统崩溃恢复也不证明 dot 云磁盘重置/替换/快照回滚后的永久保留；不会据此将真实材料备份到 GitHub、Library、Drive 或新服务。真正启用须另行审查目标私有目录并确认实际材料范围。
 
 ## 来源与许可
 

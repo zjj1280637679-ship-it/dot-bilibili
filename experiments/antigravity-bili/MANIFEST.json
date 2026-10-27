@@ -2,7 +2,7 @@
   "stage": "offline synthetic candidate; prior AG-host fixture milestone; live Bilibili unverified",
   "proposed_repository_subdirectory": "experiments/antigravity-bili",
   "date": "2026-10-27",
-  "test_methods": 251,
+  "test_methods": 304,
   "license": "MIT; component notices retained; no vendored third-party code",
   "files": {
     ".gitignore": {
@@ -14,12 +14,32 @@
       "bytes": 1108
     },
     "README.md": {
-      "sha256": "7612173259e93b325fcb8419e8b3e67a2c050eefca72a327f6910c5db0ae0070",
-      "bytes": 5116
+      "sha256": "f57b9fd6a04e01a95a6a12c087de14b06f34c433554329d909b6b3efa30e8e8e",
+      "bytes": 6217
     },
     "TESTING.md": {
-      "sha256": "f4264ee61e5690c84b8f01c974b502a01b5a6188e8ae47421f30cda53c892239",
-      "bytes": 3626
+      "sha256": "c89da408de6f9734c416c98af1307dc6705c5d68ef56d0a91a1a197983bc01f8",
+      "bytes": 4820
+    },
+    "credential-store-candidate/LICENSE": {
+      "sha256": "c7d0ff0a2634aa88047c14fbc139fe9c53bff07ca8d3c369f2bcc44290713e06",
+      "bytes": 1108
+    },
+    "credential-store-candidate/README.md": {
+      "sha256": "38cc942fd18bbff63b92e85647ac5a5947169cf9dbeba16e3cf531436a2b56d1",
+      "bytes": 11176
+    },
+    "credential-store-candidate/credential_store.py": {
+      "sha256": "4812edca4b36314ba934f23a2c601512e9c76cfd8602ef6da15eb2093eb21043",
+      "bytes": 14847
+    },
+    "credential-store-candidate/tests/process_probe.py": {
+      "sha256": "aba5df5208832bf91d3ca23b55175cfe0f06a675272473ba7209da30672f140d",
+      "bytes": 1454
+    },
+    "credential-store-candidate/tests/test_store.py": {
+      "sha256": "a7c24787571ee188835732eb6b334fca2a2be4c5a07fe2738e046c90d89417f0",
+      "bytes": 16079
     },
     "metadata-adapter-candidate/LICENSE": {
       "sha256": "c7d0ff0a2634aa88047c14fbc139fe9c53bff07ca8d3c369f2bcc44290713e06",
@@ -174,12 +194,20 @@
       "bytes": 5677
     },
     "scripts/test_offline.py": {
-      "sha256": "4bef826eb87522372348b9af9d038e4ce7f82bb5b341698cf8b1beee3dda9ee0",
-      "bytes": 924
+      "sha256": "5867f719e1228c4b9a93ec55080d767229b64e7e57850cc0c54f1c34a5fe717c",
+      "bytes": 1009
+    },
+    "tests/independent/credential_store_child.py": {
+      "sha256": "4c106963c45c37e0a83a43aebf953b24450b0b93588a8c9726503e9ba94ff638",
+      "bytes": 1854
     },
     "tests/independent/test_composition_relations.py": {
       "sha256": "5a6da672705d35cf9184d2e2ce0ca5cef985cc9e58ef478573bd1e42e3b92265",
       "bytes": 8657
+    },
+    "tests/independent/test_credential_store_relations.py": {
+      "sha256": "95edbd1821e39e7d22c6a528ca27d012c77c41e78a1c3203549447b2f79b53aa",
+      "bytes": 12117
     },
     "tests/independent/test_fixture_protocol.py": {
       "sha256": "5c4a6fad658c3bb72b45d7b693eb6b9229e1a9d4e622c55e670a680808f26032",
