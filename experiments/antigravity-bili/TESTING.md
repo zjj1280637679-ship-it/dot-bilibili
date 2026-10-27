@@ -1,6 +1,8 @@
 # Offline verification
 
-Run `python -B scripts/test_offline.py` from this directory. Each group runs in its own process, so test audit hooks do not accidentally affect another group's subprocess tests. The actual tested interpreter is Python 3.12.14 on Linux/POSIX (fork and stdio/select are used). Syntax uses Python 3.10+ features; other interpreter versions remain unverified. Tests use temporary state and do not install dependencies or enable real account transports.
+Run `python3 -B scripts/test_offline.py` from this directory. Each group runs in its own process, so test audit hooks do not accidentally affect another group's subprocess tests. The actual tested interpreter is Python 3.12.14 on Linux/POSIX (fork and stdio/select are used). Syntax uses Python 3.10+ features; other interpreter versions remain unverified. Tests use temporary state and do not install dependencies or enable real account transports.
+
+If the interpreter has another command name, replace `python3` with an available Python 3 interpreter meeting the stated version requirements; the command name is an example, not a permanent restriction. The runner uses its current interpreter for child suites. Offline success after selecting an available interpreter does not establish fresh-context stdio or host acceptance.
 
 | Included suite | Passing methods |
 |---|---:|

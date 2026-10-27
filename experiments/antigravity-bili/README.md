@@ -34,9 +34,11 @@
 使用 Python 标准库；本轮实际测试版本为 Python 3.12.14（Linux/POSIX）。代码语法使用 Python 3.10+ 特性，其他解释器版本兼容性待验证。无需 pip 安装。从本目录运行：
 
 ```sh
-python -B scripts/test_offline.py
-python -B -m minimal_slice_vnext.server --db ./fixture-state.sqlite3
+python3 -B scripts/test_offline.py
+python3 -B -m minimal_slice_vnext.server --db ./fixture-state.sqlite3
 ```
+
+这里的 `python3` 是命令示例。若该环境使用其他解释器名称，请换成该环境可用且满足上述版本条件的 Python 3 解释器；不要把命令名当作固定限制。测试入口会使用当前解释器运行子测试。
 
 服务默认 paused。只有可信本地测试操作员可使用 `--fixture-ready` 初始化一个**新** fixture DB 为未暂停；它不会清除已存在的暂停状态。不要把该参数理解成真实账号授权。
 
